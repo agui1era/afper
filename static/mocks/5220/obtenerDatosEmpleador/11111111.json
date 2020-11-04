@@ -1,0 +1,30 @@
+[
+    {
+        "nombre": "Empresa 1",
+        "rut": "11111111-1",
+        "telefono": "+56 9 9876 4567",
+        "correo": "empresa1@correo.com",
+        "rutAfp": 88888888,
+        "direccion": { "calle": "Calle Empresa 1",
+                       "numero": "111",
+                       "oficina": "Oficina 1",
+                       "regionId": 13,
+                       "ciudad": "Santiago",
+                       "comunaId": 13101
+                     }
+    },
+    {
+        "nombre": "Empresa 2",
+        "rut": "22222222-2",
+        "telefono": "+56 9 9876 4567",
+        "correo": "empresa2@correo.com",
+        "rutAfp": 88888888,
+        "direccion": { "calle": "Calle Empresa 2",
+                       "numero": "222",
+                       "oficina": "Oficina 2",
+                       "regionId": 13,
+                       "ciudad": "Santiago",
+                       "comunaId": 13101
+                     }
+    }
+]

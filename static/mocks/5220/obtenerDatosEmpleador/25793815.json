@@ -1,0 +1,16 @@
+[
+    {
+        "nombre": "Empresa 5 de trabajador consultado",
+        "rut": "55555555-5",
+        "telefono": "2 2222 5555",
+        "correo": "empresa3@correo.com",
+        "rutAfp": 66666666,
+        "direccion": { "calle": "Calle Empresa 5",
+                       "numero": "333",
+                       "oficina": "Oficina 5",
+                       "regionId": 13,
+                       "ciudad": "Santiago",
+                       "comunaId": 13101
+                     }
+    }
+]

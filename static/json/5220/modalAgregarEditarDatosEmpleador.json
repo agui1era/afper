@@ -1,0 +1,10 @@
+{
+    "boton": "Agregar empleador",
+    "titulo_agregar": "Agregar antecedentes del empleador",
+    "titulo_editar": "Editar antecedentes del empleador",
+    "lbl_restriccion": "Los campos marcados con * son obligatorios",
+    "ejemplo_mov": "Ejemplos: Móvil: [ 9 ] 123 4567 / Fijo: [52] 123 4567",
+    "error_empleador_duplicado": "El empleador que desea agregar ya existe en la lista de empleadores.",
+    "error_ingreso_empleador": "No fue posible guardar la información del empleador.",
+    "error_modificacion_empleador": "No fue posible modificar la información del empleador."
+}

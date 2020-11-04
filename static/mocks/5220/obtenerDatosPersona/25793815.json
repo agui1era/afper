@@ -1,0 +1,19 @@
+{
+    "nombres": "Gilne Carolina",
+    "apellidoPaterno": "Hernández",
+    "apellidoMaterno": "Salazar",
+    "rut": "25793815-8",
+    "fechaNac": 542851200,
+    "edad": 33,
+    "telefono": "9 8765 4321",
+    "correo": "gilne@correo.com",
+    "direccion": { "calle": "Av. Santa Rosa",
+                   "numero": "265",
+                   "poblacion": "Santiago",
+                   "block": "",
+                   "depto": "1508",
+                   "regionId": 13,
+                   "ciudad": "Santiago",
+                   "comunaId": 13101
+                 }
+}

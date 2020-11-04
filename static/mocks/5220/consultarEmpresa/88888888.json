@@ -1,0 +1,16 @@
+{
+    "run": 88888888,
+    "runDV": "8",
+    "razonSocial": "Empresa 8",
+    "email": "empresa8@correo.com",
+    "nomRepLegal": "representante empresa 8",
+    "emailRepLegal": "correorepresentante8@correo.com",
+    "preFono": "+56",
+    "fono": "988888888",
+    "direccion": { "calle": "Calle 8",
+                   "numero": "888",
+                   "oficina": "8",
+                   "ciudad": "Ciudad 8",
+                   "regionId": 13,
+                   "comunaId": 13106}
+}

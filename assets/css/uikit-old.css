@@ -1,0 +1,1650 @@
+/*Globales del UIKIT*/
+.form-cha{ /*Contenedor padre.*/
+	margin:0 auto
+}
+.container{
+    max-width: 1152px;
+}
+.container.form-cha{/*Regal que establece el ancho máximo para los formularios */
+	max-width: 720px;
+}
+.form-modal{
+	max-width: unset;
+}
+.form-cha .cont-gr{ /*Contenedor para grupos de datos, como 'label' e 'input' o respuestas en elementos 'span.añade separación vertical ante otros grupos */
+	margin-bottom:20px
+}
+.form-cha .cont-gr header{
+	margin-top:20px;
+	margin-bottom:10px
+}
+.form-cha .text-right{ /*Regla para linear elementos hacia la derecha*/
+	text-align: right;
+}
+.form-cha #respuesta{/*Margen de separación superior e inferior para las respuestas de formulario*/
+	margin:20px 0px
+}
+.form-cha #respuesta header.title{ /*El contenedor #respuesta se aplica a un elemento section que agrupa las respuestas a la consulta. La regla header.title disminuye el espaciado de los headers que se utilcen para títulos.
+	margin:20px 0px;
+}
+.form-cha a,
+.form-cha p,
+.form-cha span,
+.form-cha div,
+.form-cha ul,
+.form-cha li,
+.form-cha table{/*Familia tipográfica para la mayoría de elementos de los formularios*/
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+.form-cha #respuesta .cont-gr{/*Disminución de separación  vertical en los datos entregados como respuesta a una solicitud*/
+	margin-bottom:10px
+}
+.form-cha strong{/*Familia Roboto para los textos negrita*/
+	font-family: 'Roboto Bold';
+	font-weight: normal;
+}
+.form-cha header{/*Separación vertical de los encabezados*/
+	margin:40px 0px;
+}
+.form-cha section header{/*Separación vertical de los encabezados que están dentro de un section*/
+	margin-bottom:25px;
+}
+.form-cha .center{/*Regla para centrar texto de un contenedor*/
+	text-align: center;
+}
+/*-- 1. Títulos de la página--*/
+.form-cha h1{/*Tamaño del título principal de la página*/
+	font-size:28px
+}
+.form-cha h2{/*Tamaño de los subtítulos*/
+	font-size: 24px
+}
+.form-cha h3{/*Tamaño de los subtítulos de segundo nivel*/
+	font-size: 20px
+}
+.form-cha h4{/*Tamaño de los subtítulos de tercer nivel. Se usa tambien en los textos de subida y de bajada que acompañan al título*/
+	font-size: 16px
+}
+.form-cha header h1{/*Título principal de la página.*/
+	color: #272727;
+    font-family: 'Roboto Slab Bold', "Times New Roman", Times, serif;
+	
+}
+.form-cha header h4{/*Texto complementario al título, puede estar sobre o bajo de este.*/
+	font-family:  'Roboto', Arial, Helvetica, sans-serif;
+	color: #272727;
+	/*font-weight: 400;*/
+}
+.form-cha h2{/*Texto complementario al título, puede estar sobre o bajo de este.*/
+	color:#757575;
+	font-family: 'Roboto Slab', "Times New Roman", Times, serif;
+}
+.form-cha .h-ayuda h1,
+.form-cha .h-ayuda h2,
+.form-cha .h-ayuda h3,
+.form-cha .h-ayuda h4{/*Regla aplicada cuando el título es acompañado por links  que no hacen salto de línea.*/
+	display: inline-block;
+	margin-right: 10px;
+}
+.form-cha header p{ /*Margen de separación para los párrafos que van en los encabezados*/
+	margin-top:20px
+}
+/*-- 2. Subtítulos --*/
+.form-cha h4{/* Estilo para texto de bajada*/
+	font-size: 16px;
+	font-family:  'Roboto', Arial, Helvetica, sans-serif;
+	/*font-weight: 400;*/
+}
+/*-- 3. Card informativo --*/
+.form-cha .card{/*Contenedor tipo Card para cuadros informativos.*/
+	background-color: #fff;
+	border: 1px solid transparent;
+	padding:20px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	box-shadow:none
+
+}
+.form-cha .card header{/*Encabezado para cards donde van los títulos.*/
+	padding-top: 0px;
+	margin-top: 0px;
+	margin-bottom:20px
+}
+.form-cha .card.card-info{/*Contenedor tipo card para componentes destacados.*/
+	border: 1px solid #d4d4d4;
+} 
+.form-cha .card.card-info > a:hover{/*Regla para resaltar card en estado hover, cambiando el borde gris a azul*/
+	border: 1px solid #0F69C4;
+} 
+.form-cha .card header h4:first-child{/*Color para texto de subida que acompaña título*/
+	color:#0F69C4;
+}
+.form-cha .card header h2{/*Título principal para el card, al interior de su encabezado.*/
+	font-size: 24px;
+	margin: 0px;
+}
+.form-cha .card header h4{/*Texto de bajada de título. Va debajo del título, al interior del encabezado.*/
+	font-size: 16px;
+	margin: 0px;
+	color:#4A4A4A
+}
+.form-cha .card section{/*El contenedor del cuerpo del card es la etiqueta section.*/
+	margin-bottom: 20px;
+}
+.form-cha .card .card-footer{/*Contenedor del pie del card, espacio reservado para incorporar generalmente botones.*/
+	border-top: none;
+	text-align: right;
+	display: block;
+}
+/*-- 4. Cuadros con información --*/
+.form-cha .circulo{/*Fondo circular amarillo para enumerar listas. El valor contenido debe estar dentro de un span.*/
+	border-radius:50%;
+	margin:2px;
+	margin-right: 15px;;
+	background-color: #F2C728;
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	text-align: center;
+	font-size: 16px;
+}
+.form-cha .circulo span{/*Regla para centrar el número de la lista dentro del contenedor circular amarillo.*/
+	position: relative;
+	top:1px;
+	font-size: 14px;
+}
+.form-cha table.cuadro-info .circulo{/*Margen para los números de indice que van acompañados de una celda con título a su derecha*/
+	margin-top:3px;
+}
+.form-cha ul.lista,
+.form-cha .cuadro-info ul{/*Regla que establece el margen y estilo de las listas interiores de los cuadros informativos.*/
+	padding-left:20px;
+	list-style-position: outside;
+	list-style-type: square;
+}
+.form-cha table.cuadro-info{/*Contenedor para cuadros de información. Utiliza el elemento tabla para facilitar la enumeración de las listas.*/
+	margin-bottom: 10px;
+}
+.form-cha table.cuadro-info tr td ul li{/*Margen inferior de los elementos de las listas.*/
+	margin-bottom:5px;
+}
+.form-cha .colap-barra{ /*Contenedor principal del acordeón que despliega o colapsa información.*/
+	margin-bottom:10px
+}
+.form-cha .colap-barra .colap-button{/*Barra de acordeón que actúa como botón y que presenta el título del contenedor. Es la única información que permanece visible como encabezado, independientemente de la interacción con este botón.*/
+	border: 0;
+    width: 100%;
+    text-align: left;
+    background-color: #F7F7F7;
+    padding-top: 5px;
+	padding-bottom: 5px;
+	display:flex;
+	border: 1px solid #D5D5D5
+}
+.form-cha .colap-barra .colap-header{/*Contenedor para título de acordeón e ícono tipo flecha que permite la alineación de estos elementos*/
+	-webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #4A4A4A;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding: 0.75rem;
+	margin-left: 10px;
+}
+.form-cha .colap-cont{/*Contenedor de información que se muestra u oculta al interactuar con el botón tipo barra de acordeón.*/
+	background-color: transparent;
+	padding: 1.5rem;
+	border:1px solid #D5D5D5;
+	border-top:0px
+}
+.form-cha .colap-cont h3{
+	margin-bottom:20px 
+}
+.form-cha .span-gr span{/*Regla para que los elementos span se presenten como elementos de bloque*/
+	display: block
+}
+.form-cha .content h1, .form-cha .content h2, .form-cha .content h3, .form-cha .content h4, .form-cha .content h5, .form-cha .content h6 {
+    /*font-weight: 400;*/
+    line-height: 1.125;
+}
+.form-cha .paginador-lg ul{ /*Contenedor para paginador que alínea horizontalmente los elementos*/
+	margin-top: 20px;
+ display:inline-flex;
+}
+.form-cha .paginador-lg ul li a.active{
+	background-color:#0F69C4; 
+	color:#fff
+}
+.form-cha .paginador-lg ul li a {/*Formato de espaciado para los elementos del paginador*/
+	margin:0px 10px;
+	padding:10px 15px;
+	transition: color 0.2s, background 0.2s;
+}
+.form-cha .paginador-lg ul li a{ /*Regla para que los botones del paginador no sean azules por defecto*/
+	color:#272727
+}
+.form-cha .paginador-lg ul li a i{/*Color para los controladores (flechas) del paginador*/
+	color:#B1B1B1
+}
+.form-cha .paginador-lg ul li a:hover,
+.form-cha .paginador-lg ul li a:active,
+.form-cha .paginador-lg ul li a:focus{ /*Estilo para los números-botones del paginador en estado hover, focus y active*/
+	background-color:#0F69C4;
+}
+.form-cha .paginador-lg ul li a:hover,
+.form-cha .paginador-lg ul li a:active,
+.form-cha .paginador-lg ul li a:focus{ /*Color para los textos de los botones cuando estén en estado hover, focus y active*/
+	color:#fff
+}
+.form-cha .paginador-lg ul li a:hover,
+.form-cha .paginador-lg ul li a:active,
+.form-cha .paginador-lg ul li a:focus{ /*Color para los textos de los botones cuando estén en estado hover, focus y active*/
+	text-decoration: none!important;
+}
+.form-cha .paginador-lg ul li:first-child a:hover,
+.form-cha .paginador-lg ul li:first-child a:active,
+.form-cha .paginador-lg ul li:first-child a:focus,
+.form-cha .paginador-lg ul li:last-child a:hover,
+.form-cha .paginador-lg ul li:last-child a:active,
+.form-cha .paginador-lg ul li:last-child a:focus{ /*Regla que evita que los botones-flecha también tengan el fondo azul que solo es aplicable a los números*/
+	background-color:transparent
+}
+.form-cha .paginador-lg ul li:first-child a:hover i,
+.form-cha .paginador-lg ul li:first-child a:active i,
+.form-cha .paginador-lg ul li:first-child a:focus i,
+.form-cha .paginador-lg ul li:last-child a:hover i,
+.form-cha .paginador-lg ul li:last-child a:active i,
+.form-cha .paginador-lg ul li:last-child a:focus i{/*Regla para color de botones-flecha en estado hover, focus y active*/
+	color:#272727!important
+}
+.form-cha .paginador-lg ul li a span{/*Corregir posición de los íconos en los botones-flecha*/
+	position: relative;
+    top: -2px;
+}
+
+@media (max-width:768px){	
+	.form-cha .paginador-lg ul{/*Corregir posición de los íconos en los botones-flecha*/
+		width:100%
+	}
+	.form-cha .paginador-lg ul li:first-child a{ /*Corrección de margen izquierdo del paginador en estado smartphone*/
+		margin-left: 0px;
+	}	
+}
+/*-- 5. Formularios --*/
+.form-cha .form-sector select,
+.form-cha .form-sector span{/*Establece que los elementos 'inputs' y 'span' se comporten como bloque.*/
+	display: block
+}
+.form-cha select,
+.form-cha .select,
+.modal-form .select,
+.modal-form select{/*Regla para dar ancho de 100% a los selectores de distintos componentes*/
+	width:100%;
+}
+.form-cha .form-sector hr{/*Estilo para los separadores que van dentro de los formularios */
+	background-color: #e0e0e0
+}
+.form-cha .form-sector{/*Contenedor de datos de fondo gris. Se usa este contenedor para remarcar la zona donde van los datos que envía el usuario*/
+	padding: 30px;
+	background-color:#F7F7F7;
+	margin-bottom:20px;
+}
+.form-cha .form-sector header{/*Contenedor de títulos. Los títulos y subtítulos de los formularios deben llevar este contenedor que agrega separación a los inputs*/
+	margin:0px;
+	margin-bottom:20px;
+}
+.form-cha .form-sector h3{/*Formato para subtítulo de la sección del formulario*/
+	color: #656565;
+}
+.form-cha .form-sector p.parrafo{/*Separación para párrafos que van dentro de formulario */
+	margin-top: 20px;
+}
+.form-cha .form-sector .cont-btn{
+	direction:ltr;
+}
+.form-cha .form-sector .cont-btn .button,
+.form-cha .form-sector .cont-btn .btn,
+.form-cha .form-sector .cont-btn{
+	margin-left:0px!important;
+	margin-right: 20px;
+}
+.form-cha .cont-btn.centrar {/*Regla para centrar los contenidos */
+	text-align: center!important;
+}
+
+.form-cha .input,
+.form-cha .taginput .taginput-container.is-focusable,
+.form-cha .textarea,
+.form-cha .select select,
+.form-cha .input,
+.form-cha .taginput .taginput-container.is-focusable,
+.form-cha .textarea,
+.form-cha .select select{ /*Estilo a los campos de formulario tipo input, texta area y select */
+	background-color: white;
+    border-color: #D5D5D5;
+    border-radius: 0px;
+	color: #272727;
+	-webkit-box-shadow: none;
+    box-shadow: none;
+    max-width: 100%;
+	width: 100%;
+	height: 48px;
+}
+.input[disabled],
+.taginput .taginput-container.is-focusable[disabled],
+.textarea[disabled],
+.select select[disabled],
+fieldset[disabled] .input,
+fieldset[disabled] .taginput .taginput-container.is-focusable,
+.taginput fieldset[disabled] .taginput-container.is-focusable,
+fieldset[disabled] .textarea,
+fieldset[disabled] .select select,
+.select fieldset[disabled] select{
+	background-color: whitesmoke;
+}
+.form-cha .select:not(.is-multiple):not(.is-loading)::after,
+.form-cha .navbar-link:not(.is-arrowless)::after,
+.form-cha .select:not(.is-multiple):not(.is-loading)::after,
+.form-cha .navbar-link:not(.is-arrowless):after{/*Estilo para ícono tipo flecha, situado al costado de los contenedores select*/
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 5px 5px 0 5px;
+	border-color: #000 transparent transparent transparent;
+	border-style: inset;
+	-webkit-transform:rotate(0deg);
+	transform: rotate(0deg);
+	margin-top:0px
+}
+.form-cha .label{/*Estilo para los elementos label*/
+	color: #272727;
+	display: block;
+	font-size: 16px;
+	font-weight: 400;
+}
+.form-cha .label-solo{ /*Estilo para los label que estén fuera del contendor b-field, en casos donde el input lleva un botón pegado al lado derecho*/	
+    margin-bottom: 8px;
+    display: block;
+}
+.form-cha span.input-info {/*Texto de referencia situado al inferior de los elementos input que requieran ejemplos.*/
+	color:#0F69C4;
+	font-size: 14px;
+	position: relative;
+	top:-5px
+}
+.form-cha .select:not(.is-multiple):not(.is-loading):hover::after{/*Regla para corregir visualización de ícono tipo flecha*/
+	border-color: #000 transparent transparent transparent;
+}
+.form-cha .input::placeholder,
+.form-cha .taginput .taginput-container.is-focusable::placeholder,
+.form-cha .textarea::placeholder,
+.form-cha .select select::placeholder {/*Color del texto placeholder de los campos de formulario*/
+    color: rgba(19, 18, 18, 0.5);
+}
+.form-cha .select:not(.is-multiple){/*Regla para corregir altura de los campos tipo select*/
+	height: auto;
+}
+.form-cha .b-radio.radio input[type=radio] + .check.is-info:before {/*Color de inputs tip radio seleccionado*/
+    background: #0F69C4;
+}
+.form-cha .textarea-radio{
+	margin:10px 20px
+}
+.form-cha .has-text-primary{
+	color:#0F69C4!important;
+}
+.form-cha .b-radio.radio input[type=radio]:checked + .check.is-info,
+.form-cha .b-radio.radio input[type=radio] + .check {/*Color de borde de inputs tipo radio*/
+	border: 1px solid #D5D5D5;
+	border-color: #D5D5D5;
+	background-color: white;
+    align-self: baseline;
+}
+
+.form-cha .b-checkbox.checkbox input[type=checkbox]:focus:checked + .check.is-info { /* Modificar valores de clase "is-info" mediante js. Actualizar ícono*/
+    -webkit-box-shadow: none;
+	box-shadow: none;
+	border: 1px solid #D5D5D5;
+	
+}
+.form-cha .b-checkbox.checkbox input[type=checkbox] {/* Modificar valores de clase "is-info" mediante js*/
+    width: 20px;
+    height: 20px;
+    border-radius: 0px !important;
+	border: 1px solid #D5D5D5;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.form-cha .b-checkbox.checkbox input[type=checkbox] + .check {/* Estilo para de input de checkbox*/
+	border-radius: 0px;
+	border:1px solid #D5D5D5;
+	background-color: #fff;
+}
+.form-cha .b-checkbox.checkbox input[type=checkbox]:checked + .check{/* Estilo para de input de checkbox*/
+	border: 1px solid #0F69C4;
+	background-color: #0F69C4;
+}
+.form-cha .b-checkbox.checkbox {/* Quitar centrado vertical de input de checkbox*/
+	align-items: inherit;
+}
+.form-cha input[type="checkbox"]:focus {/* Quitar sombra de inputs tipo checkbox*/
+    -webkit-box-shadow: none !important;
+	box-shadow: none !important;		
+}
+.form-cha .b-checkbox.checkbox:hover input[type=checkbox]:not(:disabled) + .check.is-info {/*Color borde de checkbox en estado hover*/
+    border-color: #0F69C4;
+}
+.form-cha .msg-dialog{/*Mensaje de información complementaria que debe ir bajo el campo correspondiente*/
+	background-color: #12579d;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	width: auto;
+	height: auto;
+	position: relative;
+	border: none;
+	font: normal 100%/normal Arial, Helvetica, sans-serif;
+	color:#fff;
+	-o-text-overflow: clip;
+	text-overflow: clip;
+	margin-top: 30px;
+	padding:30px
+}
+.form-cha .msg-dialog:before{/*Punta para dar forma de cuadro de diálogo al contenedor de mensaje de información complementaria*/
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	width: 0;
+	height: 0;
+	position: absolute;
+	content: "";
+	top: -23px;
+	right: 100%;
+	left: 19px;
+	border: 13px solid rgba(0,0,0,0);
+	border-right: 26px solid #12579d;
+	border-left: 0 solid;
+	font: normal 100%/normal Arial, Helvetica, sans-serif;
+	color: rgba(0,0,0,1);
+	-o-text-overflow: clip;
+	text-overflow: clip;
+	text-shadow: none;
+	-webkit-transform: rotateZ(450.91778476795787deg)   ;
+	transform: rotateZ(450.91778476795787deg)   ;
+}
+.form-cha .cont-req{ /*Contenedor para nota de campos requeridos. */
+	margin:20px 0px;
+}
+.form-cha .cont-req span{ /*Separación de la nota de campo, para que tenga la misma alineación que los contenidos del formulario. */
+	margin-left:30px;
+}
+@media (max-width:768px){
+	.form-cha .cont-req span{ /*Contenedor para nota de campos requeridos. */
+		margin-left:0px;
+	}
+}
+/*-- 6. Tablas --*/
+.form-cha .tab-content{
+	padding:0px !important;
+	border: 1px solid #D5D5D5;
+}
+.form-cha .tabla-tabs {
+	margin-bottom:20px;
+}
+.form-cha table.table-input{	
+    width: 100%;
+    background-color: white;
+    border: 1px solid #dadada;
+}
+.form-cha table.table-input td .select select{
+	height: 30px;
+}
+.form-cha table.table-input th,
+.form-cha table.table-input td{
+	height: 42px;
+	padding:5px;
+	border:1px solid #dadada;
+	border-right: 0px;
+	border-left: 0px;
+}
+.form-cha table.table-input td.td-radio{
+	width:10px;
+	margin-right:0px;
+}
+.form-cha table.table-input td.td-radio label{
+    position: relative;
+	top: 5px;
+	left:7px;
+}
+.form-cha div.b-tabs.tabla-tabs nav.tabs{ /*Quitar tabs que Buefy trae por defecto en las tablas*/
+	display:none !important
+}
+.form-cha .table tr.is-selected {/*Color de la selección de la fila de la tabla*/
+    background-color: #12579d;
+    color: white;
+}
+.form-cha table td:not([align]), .form-cha table th:not([align]){/*Corregir ancho de los td de tablas*/
+	width:auto
+}
+.form-cha .table tr.is-selected a:hover{/*Color de texto para los elementos seleccionados con fondo azul*/
+	color:#fff
+}
+.form-cha .table-wrapper{/*Evita que el contenido de la tabla salga de su contenedor*/
+	overflow: auto;
+}
+.form-cha .tabla-tabs .tab-info{/*Añade margen a los elementos añadidos a la tabla que no pertenecen a la estructura Buefy*/
+ margin:20px
+}
+.form-cha .cont-btn button{
+	direction: ltr;
+}
+@media (max-width:768px){
+	.form-cha table tr{
+		background-color: #fff !important;
+	}
+	.form-cha .table tr.is-selected {
+		background-color: #12579d!important;
+	}
+	.form-cha .table{
+		background-color: transparent;
+	}
+	.form-cha .tab-content {
+		border: none
+	}
+}
+/*-- 7. Modales--*/
+.form-cha header.modal-card-head {/*Regla que corrige espaciado para los elementos header en modales*/
+    margin: 0px !important;
+}
+.form-cha .modal-card-foot{/*Regla que establece formato de tabla al contenedor para alinear correctamente los botones del footer*/
+    display: table;
+    width: 100%;
+	direction: rtl;
+	margin-top:0px;
+}
+.form-cha .modal-card-foot button{/*Regla que establece formato de elemento de tabla a los botones*/
+	display: table-cell;
+}
+.form-cha .modal-card-foot{
+	color:#000
+}
+.form-cha .modal-card-head{/*Regla que corrige esrilo del encabezado del modal*/
+	display:-webkit-box;
+}
+.form-cha .modal-card h3.modal-card-title{/*Estilo para el título del modal*/
+	font-size: 1.5rem;
+	margin-top:5px;	
+}
+.form-cha table.modal-header-table{/*Corrección del ancho del encabezado del modal*/
+	width:100%	
+}
+.form-cha .modal-card .modal-header-table tr.tr-btn td h3{/*Espaciado inferior para el título del modal*/
+	margin-bottom: 20px;
+}
+.form-cha .modal-card .modal-header-table .field:not(:last-child) {/*Corrección de espaciado inferior del modal*/
+    margin-bottom: 0px;
+}
+.form-cha .modal-card .modal-header-table tr.tr-btn td:last-child{/*Ancho mínimo para el botón cerrar del modal*/
+	min-width: 110px;
+	text-align: right;
+}
+.form-cha .modal-card-title.subt{/*Estilo para el subtítulo del modal*/
+	display:inline-block;
+	font-size: 18px !important;
+	margin-top:10px
+}
+.form-cha .modal-card-head, .form-cha .modal-card-foot {/*Regla para cambiar las esquinaa redondas del modal a rectangulares*/
+	border-radius:0px
+}
+.form-cha .modal-content, .form-cha .modal-card {/*Regla para corregir altura del modal*/
+    max-height: -webkit-fill-available
+}
+.form-cha .modal-avatar table td:first-child{/*Estilo para los modales que incorporan una imagen de perfil al lado izquierdo del contenido*/
+	width:100px;
+	padding-right: 20px;
+}
+.form-cha .modal-icono table td:first-child{/*Estilo para los modales que incorporan un ícono al lado izquierdo del contenido*/
+	width:50px;
+	padding-right: 20px;
+}
+.form-cha .modal-icono table td span i{/*Estilo para ícono que va inserto en el apartado izquierdo del modal*/
+	font-size: 25px;
+}
+.form-cha .modal-form header p{/*Evita margen de los elementos p*/
+	margin-top: 0px;
+}
+/*-- 8. Mensajes y comprobantes*/
+
+.form-cha .msg{/*Contenedor estandar para mensajes y comprobantes*/
+	border: 1px solid #D5D5D5;
+	padding:20px;
+	border-radius: 0px;
+	margin-bottom: 20px;
+}
+.form-cha .msg ul,
+.form-cha .msg ol{/*Separación vertical para las listas insertadas*/
+	margin:10px 0px
+}
+.form-cha table.msg{/*Contenedor estandar para mensajes y comprobantes dentro de tablas*/
+	border: 1px solid #D5D5D5;
+	border-radius: 0px;
+	margin-bottom: 20px;
+	width: 100%;
+}
+.form-cha table.msg ul li{ 
+	margin-bottom:10px
+}
+.form-cha table.msg td{/*Espaciado para el contenido de los elementos 'td' de la tabla*/
+	padding:20px 20px 20px 20px
+}
+.form-cha table.msg.msg-2col td:first-child{/*Cuando la tabla requiere un ícono a la izquierda, se establece esta regla para la primera columna donde va el ícono*/
+	padding:20px 0px 20px 20px;
+}
+.form-cha table.msg.msg-2col td:last-child{/*Cuando la tabla requiere un ícono a la izquierda, se establece esta regla para la segunda columna donde va la información*/
+	padding:20px 20px 20px 0px;
+	width: 100%;
+}
+.form-cha .msg span.msg-icono{/*Estilo para íconos incoporados en el sector izquierdo de los mensajes y comprobantes*/
+	margin-right: 20px;
+	display: block;
+	font-size: 20px;;
+}
+.form-cha .msg.msg-danger{/*Estilo para mensajes de danger o peligro*/
+	border-color: #EE3B41;
+	color:#EE3B41
+}
+.form-cha .msg.msg-danger span.msg-icono,
+.form-cha .msg.msg-danger strong,
+.form-cha .color-danger{/*Color para mensajes y elementos de danger o peligro*/
+	color:#EE3B41;
+}
+.form-cha .bg-danger{/*Color de fondo para elementos de danger o peligro*/
+	background-color: #EE3B41;
+	color:#fff
+}
+.form-cha .msg.msg-alerta{/*Estilo para mensajes de alerta*/
+	border-color: #FFCC00;
+	color:#272727
+}
+.form-cha .msg.msg-alerta span.msg-icono,
+.form-cha .msg.msg-alerta strong,
+.form-cha .color-alerta{/*Color para mensajes y elementos de alerta*/
+	color:#FFCC00;
+}
+.form-cha .bg-alerta{/*Color de fondo para elementos de alerta*/
+	background-color: #FFCC00;
+	color:#000
+}
+.form-cha .msg.msg-info{/*Estilo para mensajes de información*/
+	border-color: #0F69C4;
+	color:#0F69C4
+}
+.form-cha .msg.msg-info span.msg-icono,
+.form-cha .msg.msg-info strong,
+.form-cha .color-info{/*Color para mensajes y elementos de información*/
+	color:#0F69C4;
+}
+.form-cha .bg-info{/*Color de fondo para elementos de información*/
+	background-color: #0F69C4;
+	color:#fff
+}
+.form-cha .msg.msg-exito{/*Estilo para mensajes de éxito*/
+	border-color: #339933;
+	color:#339933
+}
+.form-cha .msg.msg-exito span.msg-icono,
+.form-cha .msg.msg-exito strong,
+.form-cha .color-exito{/*Color para mensajes y elementos de éxito*/
+	color:#339933
+}
+.form-cha .bg-exito{/*Color de fondo para elementos de éxito*/
+	background-color: #339933;
+	color:#fff
+}
+.form-cha .field.checkbox-modal-footer{	/*Asigna dirección en el orden de los botones*/
+    float: left;
+	direction: ltr;
+	margin-top: 10px;
+}
+.form-cha table.ficha{
+	border: 1px solid #c3bfbf;
+	width: 100%;;
+	margin-bottom: 20px;
+}
+.form-cha table.ficha tr td{
+	padding:10px 20px;
+}
+.form-cha table.ficha tr td:first-child{
+	max-width: 200px;
+}x
+/*-- 9. MODELO DE PASOS --*/
+.form-cha table.tabla-lista {/*Separación superior del contenido de los tabs*/
+	margin-top:20px
+}
+.form-cha .tabs.is-boxed a:hover {
+    background-color: transparent;
+    color:#0F69C4
+}
+.form-cha .tabs.is-boxed a, .form-cha .tabs.is-boxed .icon  {
+    align-items: inline-flex
+}
+.form-cha table.tabla-lista tr{	/*Borde inferior de las filas de contenido*/
+	border-bottom: 1px solid #d5d5d5
+}
+.form-cha table.tabla-lista tr:last-child{/*Regla para quitar borde a última fila de contenido */
+	border-bottom: none
+}
+.form-cha table.tabla-lista tr td:first-child{ /*Espaciado de las celdas del lado izquierdo del contenido*/
+	padding:10px 0px 10px 10px;
+}
+.form-cha table.tabla-lista tr td:last-child{ /* Espaciado de las celdas del lado derecho del contenido*/
+	padding:10px 10px 10px 0px;
+	position: relative;
+}
+.form-cha .b-tabs .tabs.is-boxed ul li{/*Margen de separación entre las pestañas*/
+	margin-right: 20px;
+}
+.form-cha .b-tabs .tabs.is-boxed li.is-active a { /*Estilo para el contenido de las pestañas activas*/
+    background-color: white;
+    border-color: #0F69C4;
+	border-bottom-color: transparent !important;
+	color:#0F69C4
+}
+.form-cha h3.activeL{
+	background-color: transparent;
+}
+.form-cha .modelo-pasos .tab-content{ /*Remover borde exterior de tabla, para este estilo de contenido */
+	border: none !important
+}
+.form-cha .modelo-pasos .tabs ul { /*Estilo para borde inferior del contenedor de pestañas*/
+    border-bottom-color: #0F69C4;
+}
+.form-cha .modelo-pasos .tabs.is-boxed a { /*Formato para las pestañas de navegación*/
+    border: 1px solid #b1b1b1;
+	border-radius: 4px 4px 0 0;
+	border-bottom-color: #0F69C4;
+}
+.form-cha .modelo-pasos .tabs.is-boxed a:focus {
+	box-shadow: 0 0 10px #35AC19;
+}
+
+/*-- 10. BOTONES, VÍNCULOS Y ESTADOS --*/
+
+.form-cha a, .form-cha .color-link{/*Color para los vínculos*/
+	color:#0F69C4;	
+}
+.form-cha a:hover{
+	text-decoration:underline !important
+}
+.form-cha a:hover, .form-cha a:active, .form-cha a:focus,
+.form-cha a.link:hover{/*Color para los vínculos en estado 'hover', 'active y 'focus'*/
+	color:#12579D;
+}
+.form-cha .button,
+.form-cha .btn { /*Estilo para los botones que establece dimensiones y separación */
+    font-family:  'Roboto', Arial, Helvetica, sans-serif;
+    border-radius: 0;
+    padding: 15px 55px;
+    position: relative;
+	cursor:pointer;
+	font-size: 16px;
+	margin-bottom:10px;
+	height: auto!important;
+	-webkit-appearance: auto;
+	line-height: initial;
+}
+.form-cha .icon {
+	display: inline-flex;
+}
+.form-cha .button:first-child,
+.form-cha .btn:first-child{/*Regla para quitar margen derecho al último botón dentro de una lista de botones */
+	margin-left: 0px;
+}
+.form-cha .cont-btn .button:first-child,
+.form-cha .cont-btn .btn:first-child{/*Regla para quitar margen derecho al último botón dentro de una lista de botones */
+	margin-left: 15px;
+}
+.form-cha .button.btn-sm,
+.form-cha .btn.btn-sm{/*Estilo de botón más pequeño para usos secundarios*/
+	padding: 10px 30px!important;
+}
+.form-cha .form-sector button.btn-sm,
+.form-cha .form-sector .btn.btn-sm{ /*Fija el alto para que los botones que esten pegados a un input tengan su misma altura*/
+	height: 46px!important;
+}
+.form-cha .button.is-primary,
+.form-cha .btn-primary {/*Estilo para los botones primarios*/
+    border: 1px solid #0f69b4;
+	background-color: #0f69b4;
+	color:#fff
+}
+ .button.is-primary{/*Regla para los botones primarios que usan reglas de Buefy*/
+	background-color:#0f69b4;
+	font-size: 16px;
+	font-family: 'Roboto';
+}
+
+.form-cha .button.is-primary:hover,
+.form-cha .btn-primary:hover {/*Estilo para los botones primarios en estado 'hover'*/
+    border: 1px solid #12579D;
+	background-color: #12579D;
+}
+.form-cha .button.is-default,
+.form-cha .btn-default {/*Estilo para los botones estandar*/
+    border: 1px solid #0f69b4;
+	background-color: #fff;
+	color:#0f69b4;
+}
+.form-cha .button.is-default:hover,
+.form-cha .btn-default:hover {/*Estilo para los botones estandar en estado 'hover'*/
+    border: 1px solid #12579D;
+	background-color: #12579D;
+	color:#fff
+}
+.form-cha .button.is-danger,
+.form-cha .btn-danger {/*Estilo para los botones de cuidado*/
+    border: 1px solid #EE3B41;
+	background-color: #EE3B41;
+	color:#fff;
+}
+.form-cha .buttonx.is-danger:hover,
+.form-cha .btn-danger:hover {/*Estilo para los botones de cuidado en estado 'hover'*/
+    border: 1px solid #CF3338;
+	background-color: #CF3338;
+}
+.form-cha .btn-disable{/*Estilo para los botones desabilitados*/
+    border: 1px solid #D5D5D5;
+	background-color: #F7F7F7;
+	color:#D5D5D5;
+	cursor: none;
+    pointer-events: none;
+}
+.form-cha .button:focus,
+.form-cha .btn:focus,
+.form-cha .link:focus{/*Estilo para todos los botones en estado 'focus'*/
+    outline: none;	
+    box-shadow: 0 0 10px #35AC19;
+}
+.form-cha button .icon-btn{/*Regla que establece margen a los íconos dentro de los botones*/
+	font-size: 12px;
+    position: relative;
+    left: -5px;
+}
+.form-cha .button.link,
+.form-cha button.link,
+.form-cha a.link{/*Estilo de botón tipo enlace simple*/
+	background-color: transparent;
+    border: none;
+    color: #0F69C4;
+	cursor:pointer;
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	text-decoration: underline;
+	margin-bottom: 10px;
+}
+.form-cha .button.link,
+.form-cha button.link,
+.form-cha a.link span.tag{
+	text-decoration: none
+}
+.form-cha .button.link,
+.form-cha button.link{
+	font-size: 16px;
+	padding:initial;
+    vertical-align: initial;
+}
+.form-cha .button.link.btn-icon .icon:first-child:not(:last-child){/*Corrige márgenes automáticos de Buefy que se aplican a la clase ".button" */
+	margin-left: auto!important;
+    margin-right: auto!important;
+}
+.form-cha .button.link.btn-icon,
+.form-cha button.link.btn-icon{/*Regla que remueve el underline a los botones tipo link, para especificarlo al texto y no a los íconos*/
+	text-decoration: none;
+}
+.form-cha .button.link.btn-icon span,
+.form-cha button.link.btn-icon span{/*Regla que da underline al texto de estos botones*/
+	text-decoration: underline;
+	display: inline-block;
+}
+.form-cha .button.btn-sm.btn-icon span,
+.form-cha button.btn-sm.btn-icon span{
+	display: initial;
+}
+.form-cha .button.btn-sm.btn-icon:hover,
+.form-cha button.btn-sm.btn-icon:hover{
+	background-color: #12579D;
+	color:#fff
+}
+.form-cha .button.link span.icon,
+.form-cha button.link span.icon{/*Regla que remueve el underline de los íconos de los botones*/
+	text-decoration:none;
+}
+.form-cha .button.link:hover,
+.form-cha button.link:hover{/*Color para los enlaces en estado 'hover'*/
+	color: #12579D;
+}
+
+.form-cha .button.link.btn-icon,
+.form-cha button.link.btn-icon{/*Estilo para los botones tipo link que llevan ícono*/
+	padding: 10px 11px;
+	padding-right: 20px;
+}
+.form-cha .button.btn-icon:hover,
+.form-cha button.btn-icon:hover{/*Estilo para los botones tipo link que llevan ícono en estado 'hover'*/
+	background-color: #e3e3e3;
+}
+.form-cha .button.btn-cerrar,
+.form-cha button.btn-cerrar{/*Estilo para el botón cerrar de los modales*/
+	border: 1px solid #D5D5D5;
+	text-decoration: none;
+	margin-right: 0px;
+	padding-left: 21px;
+    font-size: 14px;
+    padding-top: 12px;
+	padding-bottom: 12px;
+	background-color: #fff;
+	padding-right: 15px;
+	color: #0F69C4;    
+}
+.form-cha .button.link.btn-cerrar:hover,
+.form-cha button.link.btn-cerrar:hover{/*Estilo para el botón cerrar de los modales en estado 'hover'*/
+	background-color: #e3e3e3;
+	border:1px solid transparent
+}
+.form-cha .button.btn-cerrar span.icon,
+.form-cha button.btn-cerrar span.icon {
+	margin-right: 0px !important;
+	display: inline-block;
+	height: auto;
+	margin-left: 0px!important;
+}
+.form-cha .button.btn-cerrar span.icon i,
+.form-cha button.btn-cerrar span.icon i{
+	left: auto;
+}
+.form-cha .button.btn-buscar,
+.form-cha button.btn-buscar{
+	width: 124px !important;
+	padding:4px 4px !important;
+	padding-bottom:6px !important
+}
+.form-cha .button.btn-buscar span.icon,
+.form-cha button.btn-buscar span.icon{
+	margin-right:0px !important
+}
+.form-cha .field .control .button span.icon,
+.form-cha .field .control button span.icon{/*Evitar margen de íconos*/
+	margin-top:0px;
+	margin-right:0px;
+	margin-left:0px
+}
+.form-cha .field .control .button{/*Quita margen inferior a los botones que estén pegados a los input, ya que su margen inferior lo da el elemento ".field" que contiene ambos elementos input y botón*/
+	margin-bottom: 0px;
+}
+.form-cha a:focus,
+.form-cha .button:focus,
+.form-cha .button.is-focused,
+.button:focus:not(:active),
+.button.is-focused:not(:active),
+.button.is-primary:focus:not(:active),
+.button.is-primary.is-focused:not(:active),
+.input:focus,
+.taginput .taginput-container.is-focusable:focus,
+.textarea:focus,
+.select select:focus,
+.is-focused.input, 
+.taginput .is-focused.taginput-container.is-focusable,
+.is-focused.textarea, 
+.select select.is-focused,
+.form-cha input[type="checkbox"]:focus,
+.form-cha input[type="checkbox"]:focus + .check,
+.form-cha .b-radio.radio input[type=radio]:focus + .check,
+.form-cha .b-checkbox.checkbox input[type=checkbox]:focus + .check{ /*Regla para el estilo de estad 'focus' a los elementos de buefy*/
+	border-color: #35AC19 !important;
+	box-shadow:0 0 10px #35AC19 !important;
+	-webkit-box-shadow:0 0 10px #35AC19 !important;
+}
+/*Campos de formulario*/
+.form-cha input:hover,
+.form-cha input:active{/*Estilo para los input en estado 'hover' y 'active'*/
+	border: 1px solid #0F69C4
+}
+.form-cha .field .control span.icon{/*Ajustar posición de íconos de validación en inputs*/
+	margin-top:6px;
+	margin-right:15px;
+	margin-left:5px
+}
+.form-cha .input-btn input{/*Regla para corregir altura en los campos tipo 'input' cuando esten junto a un botón tipo 'btn-sm'*/
+	height: 46px;
+}
+.form-cha .input.is-danger{/*Estilo del input cuando presente una validación de error*/
+	border-color:#EE3B41
+}
+.form-cha label.is-danger span{	/*Estilo el texto de la validación de error*/
+   color: #EE3B41;
+}
+/*-- 11. Recomendaciones del gobierno*/
+.form-cha .switch input[type=checkbox] + .check:before { /*Regla para modificar estilo de los checkbox tipo swicht de Buefy*/
+    background: #4A4A4A
+}
+.form-cha .switch input[type=checkbox] + .check,
+.form-cha .switch input[type=checkbox]:checked + .check.is-info {/*Regla para modificar estilo de los checkbox tipo swicht de Buefy*/
+	background: #fff;
+	border: 1px solid #D5D5D5;
+}
+.form-cha .switch input[type=checkbox]:checked + .check:before{/*Regla para modificar estilo de los checkbox tipo swicht de Buefy*/
+	background: #0F69C4;
+} 
+.switch input[type=checkbox]:focus:checked + .check.is-info, 	
+.switch input[type=checkbox]:focus + .check.is-info {/*Regla para modificar estilo de los checkbox tipo swicht de Buefy*/
+    box-shadow: 0 0 10px #35AC19 !important;
+}
+.datepicker .datepicker-table .datepicker-body .datepicker-cell.is-selected {/*Calendario*/
+    background-color: #0F69C4;
+    color: white;
+}
+.form-cha header.datepicker-header {/*Regla para corregir encabezado de calendario*/
+    margin: 0px;
+}
+
+@media (min-width:737px){
+	.form-cha .cont-btn {/*Contenedor para botones. Se usa para organizar correctamente los botones y aplicar cambios en eventos responsivos*/
+	    display: table;
+	    width: 100%;
+	    direction: rtl;
+	}
+	.form-cha .cont-btn .button,
+	.form-cha .cont-btn .btn{/* Con esta regla se ordenan los botones usando la propiedad table-cell*/
+		margin-left: 15px;
+		display: table-cell;
+	}
+	.form-cha .modal-card-foot {/*Alineamiento de los botones de los modales hacia la derecha*/
+		text-align: right;
+	}
+	.form-cha .modal-card-foot .button:not(:last-child){/*Corrige margen margen que trae por efecto Buefy en la clase .button*/
+		margin:auto
+	}
+	.form-cha .modal-card-foot .button,
+	.form-cha .modal-card-foot .btn {/*Regla para añadir separación entre los botones de los modales*/
+		margin-left:20px!important
+	}
+}
+@media (max-width: 736px) and (min-width: 320px){
+	.form-cha .form-sector{ /*Corrección de márgenes para versión móvil*/
+		padding:20px 15px
+	}	
+	/* Cuando los botones esten alineados verticalmente, como en la disposicion
+	de smarpthone, deben tener el mismo ancho. El ancho de cada botón
+	está determinado por su la propiedad 'padding', en su disposición vertical su ancho
+	estará determinado por la propiedad 'width'*/
+	.form-cha .btn,
+	.form-cha .button {
+		padding-top:15px;
+		padding-bottom:15px;
+		padding-right: 0px;
+		padding-left: 0px;
+		width:250px;
+		display: block;
+		margin: 0 auto;
+		margin-bottom:10px;
+	}
+	.form-cha .button:last-child,
+	.form-cha .btn:last-child { /*Regla para corregir margen del último botón de la botonera*/
+		margin-right: auto; 
+	}
+	.form-cha .btn.btn-sm{ /*Formato para botones de segunda necesidad*/
+		width:180px;
+		margin-bottom:10px;
+		padding: 10px 10px;
+		width: max-content;
+	}
+	.form-cha .cont-btn .button:first-child,
+	.form-cha .cont-btn .btn:first-child {/*Regla para corregir margen del primer botón de la botonera*/
+		margin-left: auto;
+	}
+	
+	.form-cha .modal-card-head, .form-cha .modal-card-foot{/*Reducir márgenes de la botonera del modal*/
+	    padding: 10px 15px
+	}
+	.form-cha .modal-card-foot button.link,
+	.form-cha .modal-card-foot .button,
+	.form-cha .modal-card-foot .btn{/*Regla para establecer los botones como elementos de bloque, y para que se distribuyan verticalmente*/
+		display: block;
+		margin-left: auto;
+	}
+	.form-cha .b-tabs .tabla-tabs{
+		margin-bottom: 0px;
+	}
+	.form-cha .button.link,
+	.form-cha .button.btn-sm,
+	.form-cha .button.btn-cerrar{/*Corrección de tamaño, para regla Buefy sobre la clase ".button"*/
+		width: auto;
+	}
+	.modal-card-foot .button:not(:last-child){/*Corrección de margen, para regla Buefy sobre la clase ".button"*/
+		margin-right: auto!important;
+	}
+}
+
+/*Card tipo ficha - Categoría por establecer*/
+.form-cha .card-req .cont-flex{
+    display: flex;
+} 
+.form-cha .card-req .req-body h4 strong{
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif !important;
+}
+.form-cha .card-req strong{
+    font-weight: bold;
+}
+.form-cha .card-req hr{
+    width:100%;
+    margin:10px 0px;
+    margin-top:5px;
+}
+.form-cha .cont-flex .cont-left{
+    float:left;
+    width: 50%;
+    text-align: left;
+}
+.form-cha .cont-flex .cont-right{
+    float:right;
+    width: 50%;
+    text-align: right
+}
+.form-cha select.filter{
+    background-color: white;
+    border-color: #D5D5D5;
+    border-radius: 0px;
+    color: #272727;
+    box-shadow: none;
+    max-width: 100%;
+    width: 200px;
+    height: 48px;
+    padding-left: 0.3em; 
+}
+.form-cha select.filter::after {
+    border-color: #7957d5;
+    right: 1.125em;
+}
+.form-cha .clearfix {
+  overflow: auto;
+}
+.form-cha .page-nav a{
+    display: inline-block;
+    margin-top: 12px
+}
+.form-cha .page-nav a span{
+    vertical-align: baseline; 
+}
+.form-cha .page-nav span{
+    vertical-align: super;
+}
+/*Card tipo ficha*/
+.form-cha .card-req .cont-flex{
+    display: flex;
+} 
+.form-cha .card-req .req-body h4 strong{
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+/*Barra de progreso - Categoría por establecer*/
+.form-progress{
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+    position: relative;
+	z-index: 1;
+	margin-top:40px;
+	width:100%
+}
+.form-progress-indicator{
+	width:40px;
+	height: 40px;
+	border-radius: 40px;
+	display: initial;
+	text-align: center;
+	background-color: #ececec;
+    text-align: center;
+    margin: 0 auto;
+	font-size: 20px;	
+}
+.form-progress-indicator.p-active{
+	background-color: #0070c0;
+}
+.form-progress-indicator.p-active span strong{
+	color:#fff
+}
+.form-progress-indicator span{
+	margin-top:3px;
+	display: block;
+}
+.form-progress-bar{
+    position: relative;
+    width: 9%;
+    background-color: #ececec;
+    display: inline-block;
+	height: 4px;
+	border: 2px solid #ececec;
+    border-radius: 4px;
+}
+.form-progress-indicator strong{
+	color:#7d7b7b
+}
+.form-progress .p-after{
+	border:3px solid #0070c0;
+	background-color:#fff;
+}
+.form-progress-bar.p-after{
+	background-color: #0070c0;
+	border:2px solid #0070c0
+}
+.form-progress-indicator.p-after span strong{
+	color:#0070c0 !important
+}
+.form-progress .p-after span{
+	margin-top:0px
+}
+.items-6 .form-progress-bar{
+    width: 11%;
+}
+.items-5 .form-progress-bar{
+    width: 15%;
+}
+.items-4 .form-progress-bar{
+    width: 22%;
+}
+.items-4{
+	max-width: 90%;
+}
+.items-3 .form-progress-bar{
+    width: 27%
+}
+.items-3 {
+	max-width:330px
+}
+.items-2 .form-progress-bar{
+    width: 33%
+}
+.items-2 {
+	max-width:200px
+}
+
+@media (max-width:550px){
+	.items-6 .form-progress-bar{
+		width: 6%;
+		height: 2px;
+	}
+	.items-5 .form-progress-bar{
+		width: 8%;
+		height: 2px;
+	}
+	.items-4 .form-progress-bar{
+		width: 14%;
+		height: 2px;
+	}
+	.form-progress-indicator{
+		width: 30px;
+		height: 30px;
+	}
+	.form-progress-indicator span{
+		font-size: 15px;
+	}
+
+}
+
+
+/*Solo para los ejemplos que expone la página UI-KIT. No utilizar en el desarrollo de formularios.*/
+.uikit h1{
+	font-size: 28px;
+}
+.form-cha .card-req strong{
+    font-weight: bold;
+}
+.form-cha .card-req hr{
+    width:100%;
+    margin:10px 0px;
+    margin-top:5px;
+}
+.form-cha .cont-flex .cont-left{
+    float:left;
+    width: 50%;
+    text-align: left;
+}
+.form-cha .cont-flex .cont-right{
+    float:right;
+    width: 50%;
+    text-align: right
+}
+.form-cha select.filter{
+    background-color: white;
+    border-color: #D5D5D5;
+    border-radius: 0px;
+    color: #272727;
+    box-shadow: none;
+    max-width: 100%;
+    width: 200px;
+    height: 48px;
+    padding-left: 0.3em; 
+}
+.form-cha select.filter::after {
+    border-color: #7957d5;
+    right: 1.125em;
+}
+.form-cha .clearfix {
+  overflow: auto;
+}
+.form-cha .page-nav a{
+    display: inline-block;
+    margin-top: 12px
+}
+.form-cha .page-nav a span{
+    vertical-align: baseline; 
+}
+.form-cha .page-nav span{
+    vertical-align: super;
+}
+
+/*Solo para los ejemplos que expone la página UI-KIT. ha .link.uikit-hover{
+	color: #12579D;
+}
+.form-cha button.btn-cerrar.uikit-hover{
+	background-color: #e3e3e3;
+	border: 1px solid transparent;
+}
+.form-cha button.uikit-focus {
+    outline: none;
+    box-shadow: 0 0 10px #35AC19;
+}
+.form-cha input.uikit-hover{
+	border: 1px solid #0F69C4 !important
+}
+.form-cha input.uikit-focus{
+    box-shadow: 0 0 10px #35AC19;
+}
+.form-cha input.uikit-hover{/*
+	border: 1px solid #0F69C4
+}*/
+.form-cha span.uikit-danger{
+	color:#EE3B41
+}
+.form-cha .b-radio.radio.uikit-active input[type=radio] + .check {	
+    border: 1px solid #0F69C4;
+}
+.form-cha .b-radio.radio.radio.uikit-active input[type=radio] + .check:after {
+	background: #0F69C4;
+}
+.form-cha .b-radio.radio.uikit-danger input[type=radio] + .check {	
+    border: 1px solid #EE3B41;
+}
+.form-cha .b-radio.radio.uikit-danger span{
+	color:#EE3B41
+}
+.form-cha .b-radio.radio.uikit-disable input[type=radio] + .check {	
+	border: 1px solid #D5D5D5;
+	background-color: #F7F7F7;
+}
+.form-cha .b-radio.radio.uikit-disable span{
+	color:#B1B1B1
+}
+.form-cha .b-radio.radio.uikit-focus input[type=radio] + .check {	
+    box-shadow: 0 0 10px #35AC19;
+}
+
+.form-cha .b-checkbox.checkbox.uikit-active input[type=checkbox] + .check {	
+    border: 1px solid #0F69C4;
+}
+.form-cha .b-checkbox.checkbox.radio.uikit-active input[type=checkbox] + .check:after {
+	background: #0F69C4;
+}
+.form-cha .b-checkbox.checkbox.uikit-danger input[type=checkbox] + .check {	
+    border: 1px solid #EE3B41;
+}
+.form-cha .b-checkbox.checkbox.uikit-danger span{
+	color:#EE3B41
+}
+.form-cha .b-checkbox.checkbox.uikit-disable input[type=checkbox] + .check {	
+	border: 1px solid #D5D5D5;
+	background-color: #F7F7F7;
+}
+.form-cha .b-checkbox.checkbox.uikit-disable span{
+	color:#B1B1B1
+}
+.form-cha .b-checkbox.checkbox.uikit-focus input[type=checkbox] + .check {	
+    box-shadow: 0 0 10px #35AC19;
+}
+.form-cha .uikit-tab-activo{
+	margin-right: 96px;
+}
+.form-cha .uikit-tab-hover{
+	color:#0F69C4
+}
+.form-cha .switch.uikit-focus input[type=checkbox] + .check {	
+	box-shadow: 0 0 10px #35AC19;
+}
+.form-cha .uikit-menu-aside{
+	background-color:#fff;
+	padding:20px;
+	border: 1px solid #D5D5D5;
+	margin:10px
+}
+.form-cha .uikit-menu-aside h2{
+	color:#272727;
+	margin-bottom:10px
+}
+.form-cha .cont-btn.uikit-cont-btn .btn:first-child {
+	margin-left:auto;
+}
+#__nuxt header.uikit-head{
+	background-color: #F7F7F7;
+}
+#__nuxt header.uikit-head h1{
+	font-family: 'Roboto Slab', "Times New Roman", Times, serif;
+	font-size: 30px;
+}
+#__nuxt header.uikit-head p{
+	max-width: 600px;
+}
+#__nuxt header.uikit-head img{
+	max-width: 200px;
+}
+header.uikit .columns .column:last-child{
+	margin-top:30px
+}
+
+#__nuxt header.uikit-head{
+	background-color: #F7F7F7;
+}
+#__nuxt header.uikit-head h1{
+	font-family: 'Roboto Slab', "Times New Roman", Times, serif;
+	font-size: 30px;
+}
+#__nuxt header.uikit-head p{
+	max-width: 600px;
+}
+#__nuxt header.uikit-head img{
+	max-width: 200px;
+}
+header.uikit .columns .column:last-child{
+	margin-top:30px
+}
+.uikit-cod{
+	background-color:#F7F7F7 ;
+	padding:20px
+}
+.uikit-cod .cod{ 
+ 	background-color: #fff;
+}
+.uikit.field button.link{
+	margin-right: 20px;
+}
+#__nuxt header.uikit-head img {
+	max-width: 100px;
+	float:right;
+	margin-top:30px;
+
+}
+.menu-list li{
+	margin-bottom:15px
+}
+.menu-list a{
+	font-size:16px;
+	display: inline;
+	padding:0px;
+}
+.menu-list h3 strong{
+	color:#0f69b4;
+}
+
+.menu-list li.titulo:first-child{
+	margin-top:0px!important;
+}
+.menu-list li.titulo{
+	margin-top:20px!important;
+}
+.uikit-menu-aside.redes .menu-list li img{
+	display: inline-block;
+	max-width: 25px;
+}
+.uikit-menu-aside.redes .menu-list li a{
+	display: inline-block;
+	margin-left:5px;
+	vertical-align: super;
+}
+.uikit-menu-aside.redes .menu-list{
+	margin-top:20px
+}
+.uikit-menu-aside h2{
+	margin-bottom: 20px;
+}
+.uikit-menu-aside.redes h2{
+	margin-bottom: 0px;
+}
+.uikit-menu-aside ul{
+	list-style: none;
+}
+.uikit-menu-aside span.redes-twitter{
+	background-image: url(../images/icon-twitter-black.svg);
+	background-size: 30px;
+	width:30px;
+	height: 30px;
+	display: inline-flex;
+	position: relative;
+	top:7px;
+	margin-right: 10px;
+}
+.uikit-menu-aside a span{
+	transition: background 0.2s;
+}
+.uikit-menu-aside a:hover span.redes-twitter{	
+	background-image: url(../images/icon-twitter-hover.svg);
+}
+.uikit-menu-aside span.redes-facebook{
+	background-image: url(../images/icon-facebook-black.svg);
+	background-size: 30px;
+	width:30px;
+	height: 30px;
+	display: inline-flex;
+	position: relative;
+	top:7px;
+	margin-right: 10px;
+}
+.uikit-menu-aside a:hover span.redes-facebook{	
+	background-image: url(../images/icon-facebook-hover.svg);
+}
+.uikit-menu-aside span.redes-instagram{
+	background-image: url(../images/icon-instagram-black.svg);
+	background-size: 30px;
+	width:30px;
+	height: 30px;
+	display: inline-flex;
+	position: relative;
+	top:7px;
+	margin-right: 10px;
+}
+.uikit-menu-aside a:hover span.redes-instagram{	
+	background-image: url(../images/icon-instagram-hover.svg);
+}
+.uikit-menu-aside .menu-list a:hover{
+	background-color: transparent;
+}
+
+/* Navegador top ChileAtiende */
+.uikit nav.volver-ficha{
+	margin:20px 0px;	
+    float: right;
+    margin-right: 33px;
+}
+.uikit nav.volver-ficha i{
+	margin-right: 10px;
+}
+.uikit.nav-top img{    
+	width: auto;
+    max-width: 150px;
+    height: 45px;
+    margin-top: 8px;
+	position: relative;
+	margin-left: 12px;
+}
+.uikit.nav-top{
+	display:block
+}
+/*Footer Chile Atiende*/
+.footer-sm{
+	display: none;
+}
+#footer{
+	display: block;
+}
+footer {
+    background: #09132e;
+    color: #fff;
+	padding-top:20px;
+	margin-top: 40px;
+}
+footer .container {
+    background: #09132e;
+    color: #fff;
+	padding-bottom:40px;
+}
+footer .links-footer img {
+    width: 20px;
+    margin-right: 10px;
+	padding: 2px;	
+    position: relative;
+    top: 4px;
+}
+footer a{
+	color: #fff
+}
+footer a:hover{
+	text-decoration: underline;
+	color:#fff;
+}
+footer .gob{
+	
+    position: absolute;
+    bottom: 0px;
+}
+footer h3 {
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-bottom: 15px;
+    margin-bottom: 15;
+}
+@media (max-width:768px){
+	.footer-sm{
+		display:inline-block;
+		width:100%
+	}
+	#footer{
+		display:none
+	}
+}

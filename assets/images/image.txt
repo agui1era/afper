@@ -1,0 +1,9 @@
+https://cdn-sach2.s3.amazonaws.com/portal-chileatiende/images/icon-mail.svg
+https://cdn-sach2.s3.amazonaws.com/portal-chileatiende/images/icon-phone.svg
+https://cdn-sach2.s3.amazonaws.com/portal-chileatiende/images/icon-facebook.svg
+https://cdn-sach2.s3.amazonaws.com/portal-chileatiende/images/icon-twitter.svg
+https://cdn-sach2.s3.amazonaws.com/portal-chileatiende/images/icon-instagram.svg
+https://cdn-sach2.s3.amazonaws.com/portal-chileatiende/images/icon-youtube.svg
+https://cdn-sach2.s3.amazonaws.com/portal-chileatiende/images/icon-spotify.svg
+https://cdn-sach2.s3.amazonaws.com/portal-chileatiende/images/gob.svg
+

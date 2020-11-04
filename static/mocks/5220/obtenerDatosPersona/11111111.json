@@ -1,0 +1,19 @@
+{
+    "nombres": "Cristian Alfonso",
+    "apellidoPaterno": "Zúñiga",
+    "apellidoMaterno": "Rossel",
+    "rut": "11111111-1",
+    "fechaNac": 393811200,
+    "edad": 38,
+    "telefono": "+56 9 9876 4567",
+    "correo": "cristianzunigarossel@gmail.com",
+    "direccion": { "calle": "Del Rodeo",
+                   "numero": "#334",
+                   "poblacion": "Parque Casas de lo Ovalle",
+                   "block": "",
+                   "depto": "1313",
+                   "regionId": 13,
+                   "ciudad": "Santiago",
+                   "comunaId": 13101
+                 }
+}

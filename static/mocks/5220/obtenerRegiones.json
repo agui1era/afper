@@ -1,0 +1,67 @@
+[
+	{
+		"id": 1,
+		"nombre": "REGION DE TARAPACA"
+	},
+	{
+		"id": 2,
+		"nombre": "REGION DE ANTOFAGASTA"
+	},
+	{
+		"id": 3,
+		"nombre": "REGION DE ATACAMA"
+	},
+	{
+		"id": 4,
+		"nombre": "REGION DE COQUIMBO"
+	},
+	{
+		"id": 5,
+		"nombre": "REGION DE VALPARAISO"
+	},
+	{
+		"id": 6,
+		"nombre": "REGION DEL LIBERTADOR GENERAL BERNARDO O´HIGGIN"
+	},
+	{
+		"id": 7,
+		"nombre": "REGION DEL MAULE"
+	},
+	{
+		"id": 8,
+		"nombre": "REGION DEL BIOBIO"
+	},
+	{
+		"id": 9,
+		"nombre": "REGION DE LA ARAUCANIA"
+	},
+	{
+		"id": 10,
+		"nombre": "REGION DE LOS LAGOS"
+	},
+	{
+		"id": 11,
+		"nombre": "REGION AISEN DEL GENERAL CARLOS IBAÑEZ DEL CAMP"
+	},
+	{
+		"id": 12,
+		"nombre": "REGION DE MAGALLANES Y DE LA ANTARTICA CHILENA"
+	},
+	{
+		"id": 13,
+		"nombre": "REGION METROPOLITANA DE SANTIAGO"
+	},
+	{
+		"id": 14,
+		"nombre": "REGION DE LOS RIOS"
+	},
+	{
+		"id": 15,
+		"nombre": "REGION DE ARICA Y PARINACOTA"
+	},
+	{
+		"id": 16,
+		"nombre": "REGION DE ÑUBLE"
+	}
+	
+]

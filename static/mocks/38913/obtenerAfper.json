@@ -1,0 +1,34 @@
+{
+    "detalleAfper": [
+                    {
+                        "cAfper": 1,
+                        "nDocAfper": 12345678,
+                        "fecPagoAfper": "15-10-2020",
+                        "fecVctoAfper": "15-10-2020",
+                        "formaPagoAfper": "Cuenta Rut",
+                        "lugarPagoAfper": "Banco Estado",
+                        "mtoPagoafper": 41580,
+                        "estPagoafper": "PAGADO"
+                    },
+                    {
+                        "cAfper": 2,
+                        "nDocAfper": 87654321,
+                        "fecPagoAfper": "15-11-2020",
+                        "fecVctoAfper": "15-12-2020",
+                        "formaPagoAfper": "Deposito",
+                        "lugarPagoAfper": "Banco Falabella",
+                        "mtoPagoafper": 50000,
+                        "estPagoafper": "CADUCADO"
+                    },
+                    {
+                        "cAfper": 3,
+                        "nDocAfper": 56800149,
+                        "fecPagoAfper": "01-12-2020",
+                        "fecVctoAfper": "01-01-2021",
+                        "formaPagoAfper": "Vale Vista",
+                        "lugarPagoAfper": "Sucursal Bancaria",
+                        "mtoPagoafper": 38950,
+                        "estPagoafper": "EN TRAMITE"
+                    }
+                ]
+}

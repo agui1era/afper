@@ -1,0 +1,65 @@
+[
+  {
+    "name": "logout",
+    "path": "/logout",
+    "component": "/home/oscar/Escritorio/afper/pages/logout.vue",
+    "chunkName": "pages/logout",
+    "_name": "_6a86f028"
+  },
+  {
+    "name": "login-callback",
+    "path": "/login/callback",
+    "component": "/home/oscar/Escritorio/afper/pages/login/callback.vue",
+    "chunkName": "pages/login/callback",
+    "_name": "_4d02afe6"
+  },
+  {
+    "name": "login-claveunica",
+    "path": "/login/claveunica",
+    "component": "/home/oscar/Escritorio/afper/pages/login/claveunica.vue",
+    "chunkName": "pages/login/claveunica",
+    "_name": "_08a16aaf"
+  },
+  {
+    "name": "tramites-38913",
+    "path": "/tramites/38913",
+    "component": "/home/oscar/Escritorio/afper/pages/tramites/38913/index.vue",
+    "chunkName": "pages/tramites/38913/index",
+    "_name": "_443124a2"
+  },
+  {
+    "name": "tramites-5220",
+    "path": "/tramites/5220",
+    "component": "/home/oscar/Escritorio/afper/pages/tramites/5220/index.vue",
+    "chunkName": "pages/tramites/5220/index",
+    "_name": "_497ce8b8"
+  },
+  {
+    "name": "tramites-5220-CartolaStj",
+    "path": "/tramites/5220/CartolaStj",
+    "component": "/home/oscar/Escritorio/afper/pages/tramites/5220/CartolaStj.vue",
+    "chunkName": "pages/tramites/5220/CartolaStj",
+    "_name": "_6d5ef1a2"
+  },
+  {
+    "name": "tramites-38913-num",
+    "path": "/tramites/38913/:num",
+    "component": "/home/oscar/Escritorio/afper/pages/tramites/38913/_num.vue",
+    "chunkName": "pages/tramites/38913/_num",
+    "_name": "_36b789fa"
+  },
+  {
+    "name": "tramites-5220-num",
+    "path": "/tramites/5220/:num",
+    "component": "/home/oscar/Escritorio/afper/pages/tramites/5220/_num.vue",
+    "chunkName": "pages/tramites/5220/_num",
+    "_name": "_427209d1"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/home/oscar/Escritorio/afper/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_e60a6740"
+  }
+]

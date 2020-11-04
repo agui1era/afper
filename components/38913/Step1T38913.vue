@@ -12,20 +12,23 @@
 
         <!-- TELEMATICO NO CUMPLIMIENTO -->
         <section>
-          <table class="msg-2col">
-            <tr>
-              <td>
-                <p>
-                  NO CUMPLE SEGUNDA VALIDACION. (AFPER)
-                </p>
-              </td>
-            </tr>
-          </table>
-          <!-- Footer del Formulario -->
-          <div class="field cont-btn">
-            <b-button type="is-light" @click="volver()">Volver</b-button>
-          </div>
+        <section id="respuesta">
+            <table class="msg msg-alerta msg-2col">
+              <tr>
+                  <td><span class="msg-icono color-exito"><i class="fas fa-info-circle"></i></span></td>
+                  <td>
+                    <p> No se cumple segunda validación. (AFPER) </p>
+                  </td>
+              </tr>
+            </table>
+            <div class="field cont-btn">
+              <button type="button" @click="volver()" class="button button btn-ref is-primary is-primary">
+                  <!----> <span>Consultar otro RUN</span> <!---->
+              </button>
+            </div>
         </section>
+        </section>
+      
 
       </section>
     </div>

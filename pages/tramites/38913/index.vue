@@ -221,36 +221,16 @@ export default {
   name: 'HomePage',
 
   
-
   data() {
     return {
       config: iConfig,
       rut: '',
       fechaHoy: new Date(),
       showRut: true,
-      CodBeneficio:0
+      codBeneficio:0
     };
   },
 
-  async beforeCreate() {
-
-   const url = process.env.API_AFPER_BENEFICIO;
-   const rut = '16539330';
-
-     await this.$axios({
-        url: url + rut ,
-        method: "GET"
-         })
-        .then((response) => {
-            this.codBeneficio = response.data.data.valido;
-            console.log(this.codBeneficio);
-        })
-        .catch((error) => {
-          console.log('Error en consulta de beneficio');
-          console.log(error.response);
-        }
-        );
-  },
 
   components: { 
     ProgressBar 
@@ -263,9 +243,7 @@ export default {
     // },
     makeRequest() {
       this.reset();
-      this.$store.commit('guardaRut', this.rut);
-
-
+    
       if (this.rut == '44.444.444-4') { // No Cumple condiciones
           this.$router.push({path: `/tramites/38913/4`})
       } else if (this.rut === '11.111.111-1') {
@@ -274,17 +252,36 @@ export default {
           this.$router.push({path: `/tramites/38913/2`})
       } else {
           // Si cumple, se despliegan condiciones y const url = process.env.API_AFPER_BENEFICIO;
-        const rut = '16539330';
-
+       
+      const url = process.env.API_AFPER_BENEFICIO;
       
-      if (this.codBeneficio == 1) 
-        {
-        this.$router.push({path: `/tramites/38913/2`})
+        let arrRut = this.rut.split("-"); 
+        let rut =arrRut[0]
+        rut=rut.replaceAll('.',"")
+        console.log(rut)
+
+          this.$axios({
+            url: url + rut ,
+            method: "GET"
+            })
+            .then((response) => {
+                this.codBeneficio = response.data.data.valido;
+                console.log(this.codBeneficio);
+                if (this.codBeneficio == 1) 
+                {
+                    this.$router.push({path: `/tramites/38913/2`})
+                }
+                else
+                {
+                  console.log('No tiene beneficio AFper: '+this.codBeneficio);
         }
-        else
-        {
-          console.log('No tiene beneficio AFper: '+this.codBeneficio);
-        }
+            })
+            .catch((error) => {
+              console.log('Error en consulta de beneficio');
+              console.log(error.response);
+            }
+            );
+
 
     }
     },

@@ -206,7 +206,7 @@
 <script>
 import iConfig from '@/static/json/38913/index.json';
 import ProgressBar from "@/components/ProgressBar.vue";
-
+import axios from "axios";
 // import moment from 'moment';
 
 import Vue from "vue";
@@ -225,7 +225,8 @@ export default {
       config: iConfig,
       rut: '',
       fechaHoy: new Date(),
-      showRut: true
+      showRut: true,
+      CodBeneficio:0
     };
   },
   components: { 
@@ -239,7 +240,8 @@ export default {
     // },
     makeRequest() {
       this.reset();
-      // this.$store.commit('guardaRut', this.rut);
+      this.$store.commit('guardaRut', this.rut);
+
 
       if (this.rut == '44.444.444-4') { // No Cumple condiciones
           this.$router.push({path: `/tramites/38913/4`})
@@ -250,6 +252,25 @@ export default {
       } else {
           this.$router.push({path: `/tramites/38913/0`}) // Si cumple, se despliegan condiciones y requisitos
       }
+
+      const url = process.env.API_AFPER_BENEFICIO;
+      const rut = '16539330';
+
+      this.$axios({
+        url: url + rut ,
+        method: "GET"
+      })
+        .then((response) => {
+            this.CodBeneficio = response.data;
+            console.log(this.CodBeneficio);
+        })
+        .catch((error) => {
+          console.log('Error al consultar el beneficio');
+          console.log(error.response);
+        }
+        );
+
+     
     },
     reset() {
       this.showRut = false

@@ -220,6 +220,8 @@ Vue.directive("rut", rutInputDirective);
 export default {
   name: 'HomePage',
 
+  
+
   data() {
     return {
       config: iConfig,
@@ -229,6 +231,27 @@ export default {
       CodBeneficio:0
     };
   },
+
+  async beforeCreate() {
+
+   const url = process.env.API_AFPER_BENEFICIO;
+   const rut = '16539330';
+
+     await this.$axios({
+        url: url + rut ,
+        method: "GET"
+         })
+        .then((response) => {
+            this.codBeneficio = response.data.data.valido;
+            console.log(this.codBeneficio);
+        })
+        .catch((error) => {
+          console.log('Error en consulta de beneficio');
+          console.log(error.response);
+        }
+        );
+  },
+
   components: { 
     ProgressBar 
   },
@@ -250,27 +273,20 @@ export default {
       } else if (this.rut === '22.222.222-2') {
           this.$router.push({path: `/tramites/38913/2`})
       } else {
-          this.$router.push({path: `/tramites/38913/0`}) // Si cumple, se despliegan condiciones y requisitos
-      }
+          // Si cumple, se despliegan condiciones y const url = process.env.API_AFPER_BENEFICIO;
+        const rut = '16539330';
 
-      const url = process.env.API_AFPER_BENEFICIO;
-      const rut = '16539330';
-
-      this.$axios({
-        url: url + rut ,
-        method: "GET"
-      })
-        .then((response) => {
-            this.CodBeneficio = response.data;
-            console.log(this.CodBeneficio);
-        })
-        .catch((error) => {
-          console.log('Error al consultar el beneficio');
-          console.log(error.response);
+      
+      if (this.codBeneficio == 1) 
+        {
+        this.$router.push({path: `/tramites/38913/2`})
         }
-        );
+        else
+        {
+          console.log('No tiene beneficio AFper: '+this.codBeneficio);
+        }
 
-     
+    }
     },
     reset() {
       this.showRut = false

@@ -90,37 +90,16 @@
                      <!----> <!---->
                   </thead>
                   <tbody>
-                     <tr draggable="false" class="">
-                        <!----> <!----> 
-                        <td data-label="N° Documento:" class=""> 12345678 </td>
-                        <td data-label="Fecha de Pago:" class=""> 15-10-2020 </td>
-                        <td data-label="Fecha vcnto. Pago:" class=""> 15-10-2020 </td>
-                        <td data-label="Forma de Pago:" class=""> Cuenta Rut </td>
-                        <td data-label="Lugar de Pago:" class=""> Banco Estado </td>
-                        <td data-label="Monto:" class=""> 41580 </td>
-                        <td data-label="Estado de Pago:" class=""> PAGADO </td>
-                        <td data-label="Ver Detalle:" class="">
-                           <section>
-                              <div class="form-cha">
-                                 <section class="modal-form">
-                                    <div class="cont-btn"><a class="link"@click="IsModalDetPago = true" > Ver </a></div>
-                                    <!---->
-                                 </section>
-                              </div>
-                           </section>
-                        </td>
-                        <!---->
-                     </tr>
-                     <!----> <!---->
-                     <tr draggable="false" class="is-selected">
-                        <!----> <!----> 
-                        <td data-label="N° Documento:" class=""> 87654321 </td>
-                        <td data-label="Fecha de Pago:" class=""> 15-11-2020 </td>
-                        <td data-label="Fecha vcnto. Pago:" class=""> 15-12-2020 </td>
-                        <td data-label="Forma de Pago:" class=""> Depósito </td>
-                        <td data-label="Lugar de Pago:" class=""> Banco Falabella </td>
-                        <td data-label="Monto:" class=""> 50000 </td>
-                        <td data-label="Estado de Pago:" class=""> CADUCADO </td>
+                     
+                        <tr v-for="infoDetPago in infoPago" :key="infoDetPago.nro_documento" draggable="false">  
+                        <!----> <!---->                        
+                        <td data-label="N° Documento:" class=""> {{infoDetPago.nro_documento}}</td>
+                        <td data-label="Fecha de Pago:" class=""> {{infoDetPago.fecha_pago}}</td>
+                        <td data-label="Fecha vcnto. Pago:" class=""> {{infoDetPago.fecha_vencimiento}}</td>
+                        <td data-label="Forma de Pago:" class=""> {{infoDetPago.forma_pago}} </td>
+                        <td data-label="Lugar de Pago:" class=""> {{infoDetPago.lugar_pago}} </td>
+                        <td data-label="Monto:" class=""> {{infoDetPago.monto}} </td>
+                        <td data-label="Estado de Pago:" class=""> {{infoDetPago.estado_pago}} </td>
                         <td data-label="Ver Detalle:" class="">
                            <section>
                               <div class="form-cha">
@@ -134,38 +113,16 @@
                         <!---->
                      </tr>
                      <!----> <!---->
-                     <tr draggable="false" class="">
-                        <!----> <!----> 
-                        <td data-label="N° Documento:" class=""> 56800149 </td>
-                        <td data-label="Fecha de Pago:" class=""> 01-12-2020 </td>
-                        <td data-label="Fecha vcnto. Pago:" class=""> 01-01-2021 </td>
-                        <td data-label="Forma de Pago:" class=""> Vale Vista </td>
-                        <td data-label="Lugar de Pago:" class=""> Sucursal Bancaria </td>
-                        <td data-label="Monto:" class=""> 38990 </td>
-                        <td data-label="Estado de Pago:" class=""> EN TRÁMITE </td>
-                        <td data-label="Ver Detalle:" class="">
-                           <section>
-                              <div class="form-cha">
-                                 <section class="modal-form">
-                                    <div class="cont-btn"><a class="link" @click="IsModalDetPago = true" > Ver </a></div>
-                                    <!---->
-                                 </section>
-                              </div>
-                           </section>
-                        </td>
-                        <!---->
-                     </tr>
-                     <!----> <!---->
+                             
                   </tbody>
                   <!---->
-               </table>
-            </div>
+                  </table>
+               </div>
             <!---->
+            </div>
          </div>
-      </div>
-      
-   </section>
-</div>
+      </section>
+   </div>
 
 
           
@@ -214,7 +171,7 @@
               </div>
             </form>
           </b-modal>
-        </section>
+         </section>
         <br>
       </section>
     </div>
@@ -233,16 +190,8 @@ export default {
       IsModalDetPago: false,
       //
       detalle: dataAfper,
-      infoDetPago: {
-                    infoBeneficiario: '',
-                    infoRut: 0,
-                    infoTipoBenef: '',
-                    infoFechaPago: '',
-                    infoVctoBeneficio: '',
-                    infoNroDcto: 0,
-                    infoFecVctoDoc: '',
-                    infoMtoPago: 0
-                  }
+      infoPago: {}
+                  
     }
   },
   methods: {
@@ -253,33 +202,33 @@ export default {
       this.$router.push({ path: `/tramites/38913/` });
     }
   },
-  // mounted: function() {
-  //   this.getDetPagos();
-  //   console.log(this.infoDetPago);
-  // },
+
   async created() {
     // const url = process.env.API_AFPER_DATAPAG;
     
-    const url = process.env.API_AFPER_DATAPAG;
-    const rut = '22222222';
+    const url = process.env.API_AFPER_BENEFICIO;
+    const rut = '16539330';
 
-    this.$axios({
-      url: url + rut + '.json',
+    await this.$axios({
+      url: url + rut + '/786342',
       method: "GET"
     })
       .then((response) => {
-          this.infoDetPago = response.data;
-          console.log(this.infoDetPago);
-      })
+          this.infoPago = response.data.data;
+          console.log(this.infoPago );
+
+         }
+         )
       .catch((error) => {
-        console.log('dio error');
+        console.log('Error al consultar lista de pagos');
         console.log(error.response);
       }
       );
 
-    console.log(this.infoDetPago);
-  }
+   
+  },
 
+  
 };
 </script>
 

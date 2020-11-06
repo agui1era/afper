@@ -258,6 +258,8 @@ export default {
         let arrRut = this.rut.split("-"); 
         let rut =arrRut[0]
         rut=rut.replaceAll('.',"")
+        this.$store.commit('RUN',rut)
+        
         console.log(rut)
 
           this.$axios({

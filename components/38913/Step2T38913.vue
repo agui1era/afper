@@ -190,12 +190,51 @@ export default {
       IsModalDetPago: false,
       //
       detalle: dataAfper,
-      infoPago: {}
+      infoPago: {},
+      detallePago: {
+         nombre_beneficiario:'',
+         rut_beneficiario:'',
+         dv_beneficiario:'',
+         tipo_beneficiario:'',
+         fecha_pago:'',
+         fecha_vencimiento:'',
+         nro_documento:0,
+         fecha_vencimiento:'',      
+         monto_pago:0,
+         estado_pago:'',
+         lugar_pago:'',
+         forma_pago:'',
+         rut_causante:'',
+         dv_causante:'',
+         fecha_reconocimiento:''     
+               
+      }
                   
     }
   },
   methods: {
+
     abrirDetPago () {
+
+      const url = process.env.API_AFPER_BENEFICIO_DETALLES;
+      const rut = '16539330';
+
+         this.$axios({
+            url: url + rut + '/21088',
+            method: "GET"
+         })
+      .then((response) => {
+        
+          console.log(response.data.data );
+
+         }
+         )
+      .catch((error) => {
+        console.log('Error al consultar ldetalle del pago');
+        console.log(error.response);
+      }
+      );  
+
       this.IsModalDetPago = true
     },
     cerrarDetPago () {
@@ -226,9 +265,7 @@ export default {
         console.log('Error al consultar lista de pagos');
         console.log(error.response);
       }
-      );
-
-   
+      );  
   },
 
   

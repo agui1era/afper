@@ -104,7 +104,7 @@
                            <section>
                               <div class="form-cha">
                                  <section class="modal-form">
-                                    <div class="cont-btn"><a class="link" @click="IsModalDetPago = true" > Ver </a></div>
+                                    <div class="cont-btn"><a class="link" @click="abrirDetPago()" > Ver </a></div>
                                     <!---->
                                  </section>
                               </div>
@@ -126,56 +126,56 @@
 
 
           
-          <!-- MODAL DETALLE DE PAGO -->
-          <b-modal :active.sync="IsModalDetPago" scroll="keep">
-            <form action="" class="form-cha">
-              <div class="modal-card" style="width: auto;">
-                  <header class="modal-card-head columns">
-                    <table class="modal-header-table">
-                        <tr class="tr-btn">
-                          <td>
-                              <h3 class="modal-card-title text-black"> Detalle documento de pago n° <strong>243242342</strong><br></h3>
-                          </td>
-                          <td></td>
-                        </tr>
-                    </table>
-                  </header>
-                  <section class="modal-card-body colorTableModal">
-                    <div class="cont-gr span-gr"><span>Beneficiario:</span><span><strong>María Isabel Monsalve Gonzalez</strong></span></div>
-                    <div class="cont-gr span-gr"><span>RUN:</span><span><strong>4.444.444-4</strong></span></div>
-                    <div class="cont-gr span-gr"><span>Tipo de beneficiario:</span><span><strong>TUTOR (SUF)</strong></span></div>
-                    <div class="cont-gr span-gr"><span>Fecha de pago:</span><span><strong>23-03-2020</strong></span></div>
-                    <div class="cont-gr span-gr"><span>Vencimiento del beneficio:</span><span><strong>23-12-2020</strong></span></div>
-                    <div class="cont-gr span-gr"><span>Número de documento:</span><span><strong>75974353</strong></span></div>
-                    <div class="cont-gr span-gr"><span>Fecha de vencimiento del documento:</span><span><strong>31-05-2020</strong></span></div>
-                    <div class="cont-gr span-gr"><span>Monto de pago:</span><span><strong>47.765</strong></span></div>
-                    <div class="cont-gr span-gr"><span>Estado de pago:</span><span><strong>PAGADO</strong></span></div>
-                    <div class="cont-gr span-gr"><span>Lugar de pago:</span><span><strong>CCAF Los Héroes</strong></span></div>
-                    <div class="cont-gr span-gr"><span>Forma de pago:</span><span><strong>PRESENCIAL PERMANENTE</strong></span></div>
-                    <hr>
-                    <div class="cont-gr span-gr">
-                        <h3> Cargas / causantes por las cuales se le para el Aporte o mienbros del grupo familiar </h3>
-                    </div>
-                    <div class="cont-gr span-gr"><span>RUN causante:</span><span><strong>20.XXX.112-3</strong></span></div>
-                    <div class="cont-gr span-gr"><span>Nombre causante:</span><span><strong>JESÚS ISAÍAS ****** ******</strong></span></div>
-                    <div class="cont-gr span-gr"><span>Fecha de reconocimiento:</span><span><strong>01-06-2014</strong></span></div>
-                  </section>
-                  <footer class="modal-card-foot">
-                    <button type="button" class="button is-primary">
-                        <!----> <span>Inprimir</span> <!---->
-                    </button>
-                    <button type="button" @click="cerrarDetPago()" class="button is-default">
-                        <!----> <span>Volver a respuesta</span> <!---->
-                    </button>
-                  </footer>
-              </div>
-            </form>
-          </b-modal>
+   <!-- MODAL DETALLE DE PAGO -->
+   <b-modal :active.sync="IsModalDetPago" scroll="keep">
+   <form action="" class="form-cha">
+      <div class="modal-card" style="width: auto;">
+         <header class="modal-card-head columns">
+            <table class="modal-header-table">
+               <tr class="tr-btn">
+                  <td>
+                     <h3 class="modal-card-title text-black"> Detalle documento de pago n° <strong>243242342</strong><br></h3>
+                  </td>
+                  <td></td>
+               </tr>
+            </table>
+         </header>
+         <section class="modal-card-body colorTableModal">
+            <div class="cont-gr span-gr"><span>Beneficiario:</span><span><strong>María Isabel Monsalve Gonzalez</strong></span></div>
+            <div class="cont-gr span-gr"><span>RUN:</span><span><strong>4.444.444-4</strong></span></div>
+            <div class="cont-gr span-gr"><span>Tipo de beneficiario:</span><span><strong>TUTOR (SUF)</strong></span></div>
+            <div class="cont-gr span-gr"><span>Fecha de pago:</span><span><strong>23-03-2020</strong></span></div>
+            <div class="cont-gr span-gr"><span>Vencimiento del beneficio:</span><span><strong>23-12-2020</strong></span></div>
+            <div class="cont-gr span-gr"><span>Número de documento:</span><span><strong>75974353</strong></span></div>
+            <div class="cont-gr span-gr"><span>Fecha de vencimiento del documento:</span><span><strong>31-05-2020</strong></span></div>
+            <div class="cont-gr span-gr"><span>Monto de pago:</span><span><strong>47.765</strong></span></div>
+            <div class="cont-gr span-gr"><span>Estado de pago:</span><span><strong>PAGADO</strong></span></div>
+            <div class="cont-gr span-gr"><span>Lugar de pago:</span><span><strong>CCAF Los Héroes</strong></span></div>
+            <div class="cont-gr span-gr"><span>Forma de pago:</span><span><strong>PRESENCIAL PERMANENTE</strong></span></div>
+            <hr>
+            <div class="cont-gr span-gr">
+               <h3> Cargas / causantes por las cuales se le para el Aporte o mienbros del grupo familiar </h3>
+            </div>
+            <div class="cont-gr span-gr"><span>RUN causante:</span><span><strong>20.XXX.112-3</strong></span></div>
+            <div class="cont-gr span-gr"><span>Nombre causante:</span><span><strong>JESÚS ISAÍAS ****** ******</strong></span></div>
+            <div class="cont-gr span-gr"><span>Fecha de reconocimiento:</span><span><strong>01-06-2014</strong></span></div>
          </section>
-        <br>
-      </section>
-    </div>
-  </div>
+         <footer class="modal-card-foot">
+            <button type="button" class="button is-primary">
+               <!----> <span>Inprimir</span> <!---->
+            </button>
+            <button type="button" @click="cerrarDetPago()" class="button is-default">
+               <!----> <span>Volver a respuesta</span> <!---->
+            </button>
+         </footer>
+      </div>
+   </form>
+   </b-modal>
+</section>
+<br>
+</section>
+</div>
+</div>
 </template>
 
 <script>
@@ -195,6 +195,9 @@ export default {
     }
   },
   methods: {
+    abrirDetPago () {
+      this.IsModalDetPago = true
+    },
     cerrarDetPago () {
       this.IsModalDetPago = false
     },

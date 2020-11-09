@@ -36,7 +36,7 @@
                 <b-field label="Fecha de nacimiento *">                                    
                     <div class="columns">
                         <div class="column ">
-                            <b-select placeholder="Día">
+                            <b-select placeholder="Día" v-model="diaNac">
                               <option value="1">1</option>
                               <option value="2">2</option>
                               <option value="3">3</option>
@@ -71,7 +71,7 @@
                             </b-select>
                         </div>
                         <div class="column">
-                            <b-select placeholder="Mes">
+                            <b-select placeholder="Mes" v-model="mesNac">
                               <option value="1">1</option>
                               <option value="2">2</option>
                               <option value="3">3</option>
@@ -87,7 +87,7 @@
                             </b-select>
                         </div>
                         <div class="column ">
-                            <b-select placeholder="Año">
+                            <b-select placeholder="Año" v-model="annoNac">
                               <option value="2020">2020</option> 
                               <option value="2019">2019</option> 
                               <option value="2018">2018</option> 
@@ -227,7 +227,10 @@ export default {
       rut: '',
       fechaHoy: new Date(),
       showRut: true,
-      codBeneficio:0
+      diaNac: '',
+      mesNac: '',
+      annoNac: '',
+      codResponse:0
     };
   },
 
@@ -257,25 +260,36 @@ export default {
       
         let arrRut = this.rut.split("-"); 
         let rut =arrRut[0]
+        let dv  =arrRut[1]
         rut=rut.replaceAll('.',"")
-        this.$store.commit('RUN',rut)
+    
+        localStorage.setItem('rut', rut);
+        localStorage.setItem('dv', dv);
         
-        console.log(rut)
+        console.log(this.diaNac);
+        console.log(this.mesNac);
+        console.log(this.annoNac);
+
+        let fechaNac=(Date.parse(this.mesNac+'/'+this.diaNac+'/'+this.annoNac) / 1000);
+        localStorage.setItem('fechaNac', fechaNac);
+
+        console.log(url + rut+'/'+fechaNac  )
 
           this.$axios({
-            url: url + rut ,
+            url: url + rut+'/'+fechaNac  ,
             method: "GET"
             })
             .then((response) => {
-                this.codBeneficio = response.data.data.valido;
-                console.log(this.codBeneficio);
-                if (this.codBeneficio == 1) 
+                this.codResponse = response.status;
+                console.log("Cod de respuesta: "+this.codResponse);
+                
+                if (this.codResponse == 200) 
                 {
                     this.$router.push({path: `/tramites/38913/2`})
                 }
                 else
                 {
-                  console.log('No tiene beneficio AFper: '+this.codBeneficio);
+                  this.$router.push({path: `/tramites/38913/4`})
         }
             })
             .catch((error) => {

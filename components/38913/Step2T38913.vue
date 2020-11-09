@@ -19,7 +19,7 @@
           <p> El derecho al cobro del beneficiario vence impostergadamente a los nueve meses desde la fecha de emisión de pago. </p>
         </div>
         <section>
-
+        <div class="cont-btn"><a class="link" @click="abrirDetPago()" > Ver </a></div>
                  
      <div class="b-tabs tabla-tabs">
    <nav class="tabs">
@@ -134,31 +134,31 @@
             <table class="modal-header-table">
                <tr class="tr-btn">
                   <td>
-                     <h3 class="modal-card-title text-black"> Detalle documento de pago n° <strong>243242342</strong><br></h3>
+                     <h3 class="modal-card-title text-black"> Detalle documento de pago n° <strong>{{detallePago.nro_documento}}</strong><br></h3>
                   </td>
                   <td></td>
                </tr>
             </table>
          </header>
          <section class="modal-card-body colorTableModal">
-            <div class="cont-gr span-gr"><span>Beneficiario:</span><span><strong>María Isabel Monsalve Gonzalez</strong></span></div>
-            <div class="cont-gr span-gr"><span>RUN:</span><span><strong>4.444.444-4</strong></span></div>
-            <div class="cont-gr span-gr"><span>Tipo de beneficiario:</span><span><strong>TUTOR (SUF)</strong></span></div>
-            <div class="cont-gr span-gr"><span>Fecha de pago:</span><span><strong>23-03-2020</strong></span></div>
-            <div class="cont-gr span-gr"><span>Vencimiento del beneficio:</span><span><strong>23-12-2020</strong></span></div>
-            <div class="cont-gr span-gr"><span>Número de documento:</span><span><strong>75974353</strong></span></div>
-            <div class="cont-gr span-gr"><span>Fecha de vencimiento del documento:</span><span><strong>31-05-2020</strong></span></div>
-            <div class="cont-gr span-gr"><span>Monto de pago:</span><span><strong>47.765</strong></span></div>
-            <div class="cont-gr span-gr"><span>Estado de pago:</span><span><strong>PAGADO</strong></span></div>
-            <div class="cont-gr span-gr"><span>Lugar de pago:</span><span><strong>CCAF Los Héroes</strong></span></div>
-            <div class="cont-gr span-gr"><span>Forma de pago:</span><span><strong>PRESENCIAL PERMANENTE</strong></span></div>
+            <div class="cont-gr span-gr"><span>Beneficiario:</span><span><strong>{{detallePago.nombre_beneficiario}}</strong></span></div>
+            <div class="cont-gr span-gr"><span>RUN:</span><span><strong>{{detallePago.rut_beneficiario}}-{{detallePago.dv_beneficiario}}</strong></span></div>
+            <div class="cont-gr span-gr"><span>Tipo de beneficiario:</span><span><strong>{{detallePago.tipo_beneficiario}}</strong></span></div>
+            <div class="cont-gr span-gr"><span>Fecha de pago:</span><span><strong>{{detallePago.fecha_pago}}</strong></span></div>
+            <div class="cont-gr span-gr"><span>Vencimiento del beneficio:</span><span><strong>{{detallePago.fecha_vencimiento_beneficio}}</strong></span></div>
+            <div class="cont-gr span-gr"><span>Número de documento:</span><span><strong>{{detallePago.nro_documento}}</strong></span></div>
+            <div class="cont-gr span-gr"><span>Fecha de vencimiento del documento:</span><span><strong>{{detallePago.fecha_vencimiento_documento}}</strong></span></div>
+            <div class="cont-gr span-gr"><span>Monto de pago:</span><span><strong>{{detallePago.monto_pago}}</strong></span></div>
+            <div class="cont-gr span-gr"><span>Estado de pago:</span><span><strong>{{detallePago.estado_pago}}</strong></span></div>
+            <div class="cont-gr span-gr"><span>Lugar de pago:</span><span><strong>{{detallePago.lugar_pago}}</strong></span></div>
+            <div class="cont-gr span-gr"><span>Forma de pago:</span><span><strong>{{detallePago.forma_pago}}</strong></span></div>
             <hr>
             <div class="cont-gr span-gr">
                <h3> Cargas / causantes por las cuales se le para el Aporte o mienbros del grupo familiar </h3>
             </div>
-            <div class="cont-gr span-gr"><span>RUN causante:</span><span><strong>20.XXX.112-3</strong></span></div>
-            <div class="cont-gr span-gr"><span>Nombre causante:</span><span><strong>JESÚS ISAÍAS ****** ******</strong></span></div>
-            <div class="cont-gr span-gr"><span>Fecha de reconocimiento:</span><span><strong>01-06-2014</strong></span></div>
+            <div class="cont-gr span-gr"><span>RUN causante:</span><span><strong>{{detallePago.rut_causante}}-{{detallePago.dv_causante}}</strong></span></div>
+            <div class="cont-gr span-gr"><span>Nombre causante:</span><span><strong>{{detallePago.nombre_causante}}</strong></span></div>
+            <div class="cont-gr span-gr"><span>Fecha de reconocimiento:</span><span><strong>{{detallePago.fecha_reconocimiento}}</strong></span></div>
          </section>
          <footer class="modal-card-foot">
             <button type="button" class="button is-primary">
@@ -197,13 +197,15 @@ export default {
          dv_beneficiario:'',
          tipo_beneficiario:'',
          fecha_pago:'',
-         fecha_vencimiento:'',
-         nro_documento:0,
-         fecha_vencimiento:'',      
-         monto_pago:0,
+         fecha_vencimiento_beneficio:'',     
+         nro_documento:0, 
+         fecha_vencimiento_documento:'', 
+         monto_pago:'',
          estado_pago:'',
          lugar_pago:'',
          forma_pago:'',
+         
+         nombre_causante:'',
          rut_causante:'',
          dv_causante:'',
          fecha_reconocimiento:''     
@@ -216,22 +218,43 @@ export default {
 
     abrirDetPago () {
 
-      const url = process.env.API_AFPER_BENEFICIO_DETALLES;
-      const rut = '16539330';
+      const url = process.env.API_AFPER_BENEFICIO;
+      const nroDoc = '95798345';
 
          this.$axios({
-            url: url + rut + '/21088',
+            url: url + nroDoc,
             method: "GET"
          })
       .then((response) => {
         
           console.log(response.data.data );
 
+          this.nombre_beneficiario=response.data.data.nombre_beneficiario;
+          this.rut_beneficiario=response.data.data.rut_beneficiario;
+          this.dv_beneficiario=response.data.data.dv_beneficiario;
+          this.dv_beneficiario=response.data.data.dv_beneficiario;
+          this.tipo_beneficiario=reponse.data.data.tipo_beneficiario;
+          this.fecha_pago=response.data.data.fecha_pago;
+          this.fecha_vencimiento_beneficio=response.data.data.fecha_vencimiento_beneficio
+          this.nro_documento=response.data.data.nro_documento;
+          this.fecha_vencimiento_documento=response.data.data.fecha_vencimiento_documento;
+          this.monto_pago=response.data.data.monto_pago;
+          this.estado_pago=response.data.data.estado_pago;
+          this.lugar_pago=response.data.data.lugar_pago;
+          this.forma_pago=response.data.data.forma_pago;
+
+          this.nombre_causante=response.data.data.nombre_causante;
+          this.rut_causante=response.data.data.rut_causante;
+          this.dv_causante=response.data.data.dv_causante;
+          this.fecha_reconocimiento=response.data.data.fecha_reconocimiento;
+
          }
          )
       .catch((error) => {
-        console.log('Error al consultar ldetalle del pago');
+        console.log('Error al consultar detalle del pago');
+
         console.log(error.response);
+        cerrarDetPago ()
       }
       );  
 
@@ -249,23 +272,24 @@ export default {
     // const url = process.env.API_AFPER_DATAPAG;
     
     const url = process.env.API_AFPER_BENEFICIO;
-    const rut = '16539330';
+          
+        let rut=localStorage.getItem('rut');
+        let fechaNac=localStorage.getItem('fechaNac');
 
-    await this.$axios({
-      url: url + rut + '/786342',
-      method: "GET"
-    })
-      .then((response) => {
-          this.infoPago = response.data.data;
-          console.log(this.infoPago );
-
-         }
-         )
-      .catch((error) => {
-        console.log('Error al consultar lista de pagos');
-        console.log(error.response);
-      }
-      );  
+          this.$axios({
+            url: url + rut+'/'+fechaNac  ,
+            method: "GET"
+            })
+            .then((response) => {
+                this.infoPago = response.data.data.pagos;
+                console.log(this.infoPago );
+                              
+            })
+            .catch((error) => {
+              
+               console.log('Error al consultar lista de pagos');
+               console.log(error.response);
+            });
   },
 
   

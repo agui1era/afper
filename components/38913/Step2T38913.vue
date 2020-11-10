@@ -10,16 +10,9 @@
           <h1>{{this.config.titulo}}</h1>
         </header>
         <div class="cont-gr">
-          <p> Este año, usted es beneficiario del Aporte Familiar Permanente y recibirá <strong>$43.042 (cuarentaytres mil, cuarenta y dos pesos)</strong>, por cada causante de subsidio o carga familiar debidamente acreditada al 31 de Diciember de 2020. </p>
-        </div>
-        <div class="cont-gr">
-          <p> Su pago total es de <strong>$43.042</strong> pesos, el que podrá cobrar presentando su cédula de identidad, a partir del 01.03.2021, en el local de la Caja de Compensación Los Héroes contratado por el IPS, en la comuna de Santiago. </p>
-        </div>
-        <div class="cont-gr">
-          <p> El derecho al cobro del beneficiario vence impostergadamente a los nueve meses desde la fecha de emisión de pago. </p>
+           <span v-html="mensajeBeneficio"></span>
         </div>
         <section>
-        <div class="cont-btn"><a class="link" @click="abrirDetPago()" > Ver </a></div>
                  
      <div class="b-tabs tabla-tabs">
    <nav class="tabs">
@@ -104,7 +97,7 @@
                            <section>
                               <div class="form-cha">
                                  <section class="modal-form">
-                                    <div class="cont-btn"><a class="link" @click="abrirDetPago()" > Ver </a></div>
+                                    <div class="cont-btn"><a class="link" @click="abrirDetPago(infoDetPago.nro_documento)" > Ver </a></div>
                                     <!---->
                                  </section>
                               </div>
@@ -142,7 +135,7 @@
          </header>
          <section class="modal-card-body colorTableModal">
             <div class="cont-gr span-gr"><span>Beneficiario:</span><span><strong>{{detallePago.nombre_beneficiario}}</strong></span></div>
-            <div class="cont-gr span-gr"><span>RUN:</span><span><strong>{{detallePago.rut_beneficiario}}-{{detallePago.dv_beneficiario}}</strong></span></div>
+            <div class="cont-gr span-gr"><span>RUN:</span><span><strong>{{formatRut(detallePago.rut_completo)}}</strong></span></div>
             <div class="cont-gr span-gr"><span>Tipo de beneficiario:</span><span><strong>{{detallePago.tipo_beneficiario}}</strong></span></div>
             <div class="cont-gr span-gr"><span>Fecha de pago:</span><span><strong>{{detallePago.fecha_pago}}</strong></span></div>
             <div class="cont-gr span-gr"><span>Vencimiento del beneficio:</span><span><strong>{{detallePago.fecha_vencimiento_beneficio}}</strong></span></div>
@@ -156,12 +149,16 @@
             <div class="cont-gr span-gr">
                <h3> Cargas / causantes por las cuales se le para el Aporte o mienbros del grupo familiar </h3>
             </div>
-            <div class="cont-gr span-gr"><span>RUN causante:</span><span><strong>{{detallePago.rut_causante}}-{{detallePago.dv_causante}}</strong></span></div>
-            <div class="cont-gr span-gr"><span>Nombre causante:</span><span><strong>{{detallePago.nombre_causante}}</strong></span></div>
-            <div class="cont-gr span-gr"><span>Fecha de reconocimiento:</span><span><strong>{{detallePago.fecha_reconocimiento}}</strong></span></div>
+                 
+                  <div v-for="detalleCausante in detalleCausantes" :key = "detalleCausante.rut_causante" >
+                  <div class="cont-gr span-gr"><span>RUN causante:</span><span><strong>{{ formatRut(detalleCausante.rut_causante)}}</strong></span></div>
+                  <div class="cont-gr span-gr"><span>Nombre causante:</span><span><strong>{{ detalleCausante.nombre_causante}}</strong></span></div>
+                  <div class="cont-gr span-gr"><span>Fecha de reconocimiento:</span><span><strong>{{ detalleCausante.fecha_reconocimiento}}</strong></span></div>
+                  </div>
+           
          </section>
          <footer class="modal-card-foot">
-            <button type="button" class="button is-primary">
+            <button type="button" @click="enviarImprimir()" class="button is-primary">
                <!----> <span>Inprimir</span> <!---->
             </button>
             <button type="button" @click="cerrarDetPago()" class="button is-default">
@@ -190,36 +187,45 @@ export default {
       IsModalDetPago: false,
       //
       detalle: dataAfper,
-      infoPago: {},
+      mensajeBeneficio:'',
+      detalleCausantes:'',
+      infoPago: {},     
       detallePago: {
          nombre_beneficiario:'',
          rut_beneficiario:'',
          dv_beneficiario:'',
+         rut_completo:'',
          tipo_beneficiario:'',
          fecha_pago:'',
          fecha_vencimiento_beneficio:'',     
-         nro_documento:0, 
+         nro_documento:'', 
          fecha_vencimiento_documento:'', 
          monto_pago:'',
          estado_pago:'',
          lugar_pago:'',
          forma_pago:'',
          
-         nombre_causante:'',
-         rut_causante:'',
-         dv_causante:'',
-         fecha_reconocimiento:''     
-               
       }
                   
     }
   },
   methods: {
 
-    abrirDetPago () {
+    FormatRut(rut) {
+      let clearRut = typeof rut === 'string' ? rut.replace(/[^0-9kK]+/g, '').toUpperCase() : '';
+
+      let result = clearRut.slice(-4, -1) + '-' + clearRut.substr(clearRut.length - 1)
+      for (let i = 4; i < clearRut.length; i += 3) {
+          result = clearRut.slice(-3 - i, -i) + '.' + result
+      }
+      return result;
+    },
+
+    abrirDetPago (nroDoc) {
 
       const url = process.env.API_AFPER_BENEFICIO;
-      const nroDoc = '95798345';
+      
+      console.log("Consultar detalle de pago: "+url+nroDoc)
 
          this.$axios({
             url: url + nroDoc,
@@ -229,45 +235,47 @@ export default {
         
           console.log(response.data.data );
 
-          this.nombre_beneficiario=response.data.data.nombre_beneficiario;
-          this.rut_beneficiario=response.data.data.rut_beneficiario;
-          this.dv_beneficiario=response.data.data.dv_beneficiario;
-          this.dv_beneficiario=response.data.data.dv_beneficiario;
-          this.tipo_beneficiario=reponse.data.data.tipo_beneficiario;
-          this.fecha_pago=response.data.data.fecha_pago;
-          this.fecha_vencimiento_beneficio=response.data.data.fecha_vencimiento_beneficio
-          this.nro_documento=response.data.data.nro_documento;
-          this.fecha_vencimiento_documento=response.data.data.fecha_vencimiento_documento;
-          this.monto_pago=response.data.data.monto_pago;
-          this.estado_pago=response.data.data.estado_pago;
-          this.lugar_pago=response.data.data.lugar_pago;
-          this.forma_pago=response.data.data.forma_pago;
+          this.detallePago.nombre_beneficiario=response.data.data.nombre_beneficiario;
+          this.detallePago.rut_completo= response.data.data.rut_beneficiario + response.data.data.dv_beneficiario;
+          this.detallePago.tipo_beneficiario=response.data.data.tipo_beneficiario;
+          this.detallePago.fecha_pago=response.data.data.fecha_pago;
+          //this.detallePago.fecha_vencimiento_beneficio=response.data.data.fecha_vencimiento_beneficio
+          this.detallePago.nro_documento=response.data.data.nro_documento;
+          //this.detallePago.fecha_vencimiento_documento=response.data.data.fecha_vencimiento_documento;
+          this.detallePago.monto_pago=response.data.data.monto_pago;
+          //this.detallePago.estado_pago=response.data.data.estado_pago;
+          //this.detallePago.lugar_pago=response.data.data.lugar_pago;
+          //this.detallePago.forma_pago=response.data.data.forma_pago;
 
-          this.nombre_causante=response.data.data.nombre_causante;
-          this.rut_causante=response.data.data.rut_causante;
-          this.dv_causante=response.data.data.dv_causante;
-          this.fecha_reconocimiento=response.data.data.fecha_reconocimiento;
+          this.detalleCausantes=response.data.data.causantes;
 
+          console.log(this.detalleCausantes );
          }
          )
       .catch((error) => {
+        
         console.log('Error al consultar detalle del pago');
-
         console.log(error.response);
-        cerrarDetPago ()
+        this.cerrarDetPago ()
       }
       );  
 
       this.IsModalDetPago = true
     },
     cerrarDetPago () {
+      
       this.IsModalDetPago = false
     },
     volver() {
-      this.$router.push({ path: `/tramites/38913/` });
+     
+     this.$router.push({ path: `/tramites/38913/` });
+    },
+    enviarImprimir(){     
+      
+      window.print();
+
     }
   },
-
   async created() {
     // const url = process.env.API_AFPER_DATAPAG;
     
@@ -275,6 +283,9 @@ export default {
           
         let rut=localStorage.getItem('rut');
         let fechaNac=localStorage.getItem('fechaNac');
+
+        this.mensajeBeneficio=localStorage.getItem('mensajeBeneficio');
+        console.log('Mensaje beneficiario: '+this.mensajeBeneficio)
 
           this.$axios({
             url: url + rut+'/'+fechaNac  ,

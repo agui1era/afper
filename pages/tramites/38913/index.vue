@@ -227,10 +227,11 @@ export default {
       rut: '',
       fechaHoy: new Date(),
       showRut: true,
-      diaNac: '',
-      mesNac: '',
-      annoNac: '',
-      codResponse:0
+      diaNac: null,
+      mesNac: null,
+      annoNac: null,
+      codResponse:0,
+      mensajeBeneficio:''
     };
   },
 
@@ -239,23 +240,10 @@ export default {
     ProgressBar 
   },
   methods: {
-    // formatDate(value){
-    //   if (value) {
-    //     return moment(String(value)).format('DD/MM/YYYY')
-    //     }
-    // },
+    
     makeRequest() {
       this.reset();
-    
-      if (this.rut == '44.444.444-4') { // No Cumple condiciones
-          this.$router.push({path: `/tramites/38913/4`})
-      } else if (this.rut === '11.111.111-1') {
-          this.$router.push({path: `/tramites/38913/1`})
-      } else if (this.rut === '22.222.222-2') {
-          this.$router.push({path: `/tramites/38913/2`})
-      } else {
-          // Si cumple, se despliegan condiciones y const url = process.env.API_AFPER_BENEFICIO;
-       
+   
       const url = process.env.API_AFPER_BENEFICIO;
       
         let arrRut = this.rut.split("-"); 
@@ -266,11 +254,15 @@ export default {
         localStorage.setItem('rut', rut);
         localStorage.setItem('dv', dv);
         
-        console.log(this.diaNac);
-        console.log(this.mesNac);
-        console.log(this.annoNac);
 
-        let fechaNac=(Date.parse(this.mesNac+'/'+this.diaNac+'/'+this.annoNac) / 1000);
+        if(parseInt(this.mesNac) < 10)
+          {this.mesNac="0"+this.mesNac};
+        if(parseInt(this.diaNac) < 10)
+          {this.diaNac="0"+this.diaNac};
+
+
+        let fechaNac=this.annoNac+this.mesNac+this.diaNac
+        console.log("Fecha de nacimiento: "+fechaNac);
         localStorage.setItem('fechaNac', fechaNac);
 
         console.log(url + rut+'/'+fechaNac  )
@@ -281,6 +273,9 @@ export default {
             })
             .then((response) => {
                 this.codResponse = response.status;
+                this.mensajeBeneficio=response.data.data.mensajeBeneficio;
+                localStorage.setItem('mensajeBeneficio', this.mensajeBeneficio);
+
                 console.log("Cod de respuesta: "+this.codResponse);
                 
                 if (this.codResponse == 200) 
@@ -297,9 +292,6 @@ export default {
               console.log(error.response);
             }
             );
-
-
-    }
     },
     reset() {
       this.showRut = false

@@ -235,7 +235,7 @@ export default {
     };
   },
 
-
+  middleware: 'auth',
   components: { 
     ProgressBar 
   },

@@ -91,7 +91,7 @@
                         <td data-label="Fecha vcnto. Pago:" class=""> {{infoDetPago.fecha_vencimiento}}</td>
                         <td data-label="Forma de Pago:" class=""> {{infoDetPago.forma_pago}} </td>
                         <td data-label="Lugar de Pago:" class=""> {{infoDetPago.lugar_pago}} </td>
-                        <td data-label="Monto:" class=""> {{infoDetPago.monto}} </td>
+                        <td data-label="Monto:" class="">${{formatMoneda(infoDetPago.monto)}} </td>
                         <td data-label="Estado de Pago:" class=""> {{infoDetPago.estado_pago}} </td>
                         <td data-label="Ver Detalle:" class="">
                            <section>
@@ -141,7 +141,7 @@
             <div class="cont-gr span-gr"><span>Vencimiento del beneficio:</span><span><strong>{{detallePago.fecha_vencimiento_beneficio}}</strong></span></div>
             <div class="cont-gr span-gr"><span>Número de documento:</span><span><strong>{{detallePago.nro_documento}}</strong></span></div>
             <div class="cont-gr span-gr"><span>Fecha de vencimiento del documento:</span><span><strong>{{detallePago.fecha_vencimiento_documento}}</strong></span></div>
-            <div class="cont-gr span-gr"><span>Monto de pago:</span><span><strong>{{detallePago.monto_pago}}</strong></span></div>
+            <div class="cont-gr span-gr"><span>Monto de pago:</span><span><strong>${{formatMoneda(detallePago.monto_pago,0)}}</strong></span></div>
             <div class="cont-gr span-gr"><span>Estado de pago:</span><span><strong>{{detallePago.estado_pago}}</strong></span></div>
             <div class="cont-gr span-gr"><span>Lugar de pago:</span><span><strong>{{detallePago.lugar_pago}}</strong></span></div>
             <div class="cont-gr span-gr"><span>Forma de pago:</span><span><strong>{{detallePago.forma_pago}}</strong></span></div>
@@ -151,7 +151,7 @@
             </div>
                  
                   <div v-for="detalleCausante in detalleCausantes" :key = "detalleCausante.rut_causante" >
-                  <div class="cont-gr span-gr"><span>RUN causante:</span><span><strong>{{ formatRut(detalleCausante.rut_causante)}}</strong></span></div>
+                  <div class="cont-gr span-gr"><span>RUN causante:</span><span><strong>{{ detalleCausante.rut_causante + "-X"}}</strong></span></div>
                   <div class="cont-gr span-gr"><span>Nombre causante:</span><span><strong>{{ detalleCausante.nombre_causante}}</strong></span></div>
                   <div class="cont-gr span-gr"><span>Fecha de reconocimiento:</span><span><strong>{{ detalleCausante.fecha_reconocimiento}}</strong></span></div>
                   </div>
@@ -211,7 +211,7 @@ export default {
   },
   methods: {
 
-    FormatRut(rut) {
+    formatRut(rut) {
       let clearRut = typeof rut === 'string' ? rut.replace(/[^0-9kK]+/g, '').toUpperCase() : '';
 
       let result = clearRut.slice(-4, -1) + '-' + clearRut.substr(clearRut.length - 1)
@@ -219,6 +219,31 @@ export default {
           result = clearRut.slice(-3 - i, -i) + '.' + result
       }
       return result;
+    },
+
+    formatMoneda(amount, decimals) {
+         
+         amount += ''; // por si pasan un numero en vez de un string
+         amount = parseFloat(amount.replace(/[^0-9\.]/g, '')); // elimino cualquier cosa que no sea numero o punto
+
+         decimals = decimals || 0; // por si la variable no fue fue pasada
+
+         // si no es un numero o es igual a cero retorno el mismo cero
+         if (isNaN(amount) || amount === 0) 
+            return parseFloat(0).toFixed(decimals);
+
+         // si es mayor o menor que cero retorno el valor formateado como numero
+         amount = '' + amount.toFixed(decimals);
+
+         var amount_parts = amount.split('.'),
+            regexp = /(\d+)(\d{3})/;
+
+         while (regexp.test(amount_parts[0]))
+            amount_parts[0] = amount_parts[0].replace(regexp, '$1' + '.' + '$2');
+
+         return amount_parts.join('.');
+    
+           
     },
 
     abrirDetPago (nroDoc) {
@@ -239,13 +264,13 @@ export default {
           this.detallePago.rut_completo= response.data.data.rut_beneficiario + response.data.data.dv_beneficiario;
           this.detallePago.tipo_beneficiario=response.data.data.tipo_beneficiario;
           this.detallePago.fecha_pago=response.data.data.fecha_pago;
-          //this.detallePago.fecha_vencimiento_beneficio=response.data.data.fecha_vencimiento_beneficio
+          this.detallePago.fecha_vencimiento_beneficio=response.data.data.fecha_vencimiento_beneficio
           this.detallePago.nro_documento=response.data.data.nro_documento;
-          //this.detallePago.fecha_vencimiento_documento=response.data.data.fecha_vencimiento_documento;
+          this.detallePago.fecha_vencimiento_documento=response.data.data.fecha_vencimiento_documento;
           this.detallePago.monto_pago=response.data.data.monto_pago;
-          //this.detallePago.estado_pago=response.data.data.estado_pago;
-          //this.detallePago.lugar_pago=response.data.data.lugar_pago;
-          //this.detallePago.forma_pago=response.data.data.forma_pago;
+          this.detallePago.estado_pago=response.data.data.estado_pago;
+          this.detallePago.lugar_pago=response.data.data.lugar_pago;
+          this.detallePago.forma_pago=response.data.data.forma_pago;
 
           this.detalleCausantes=response.data.data.causantes;
 

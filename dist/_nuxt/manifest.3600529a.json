@@ -1,0 +1,11 @@
+{
+  "name": "prototipo-stj",
+  "short_name": "prototipo-stj",
+  "description": "Migración tramites a Chile Atiende",
+  "icons": [],
+  "start_url": "/?standalone=true",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "blue",
+  "lang": "en"
+}

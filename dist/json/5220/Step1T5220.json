@@ -1,0 +1,19 @@
+{
+    "proveedor_servicio": "Servicio de información entregado por",
+    "nombre_proveedor_servicio": "Instituto de Previsión Social",
+    "titulo": "Solicitud Subsidio al Trabajador Joven - Cotización",
+    "descripcion": "",
+    "Subtitulo_h2": "Formulario",
+    "subtitulo_h3_1": "Antecedentes laborales y previsionales",
+    "subtitulo_h3_2": "Empleador para el cual presta servicios",
+    "checkbox1_text": "Tomo conocimiento que el Subsidio al Trabajador Joven – Cotización es incompatible con la cotización del Seguro de Invalidez y Sobrevivencia (SIS), por lo que si decido postular al beneficio será de mi cargo el pago de este seguro.*",
+    "checkbox2_text": "Tomo conocimiento que el pago del subsidio será suspendido en los meses en que la suma de mis remuneraciones supere los 1,5 ingresos mínimos mensuales, pudiendo incrementarse hasta 2 ingresos mínimos mensuales sólo a contar del 13vo subsidio percibido.*",
+    "lbl_restriccion": "Los campos marcados con * son obligatorios",
+    "msg_error_datos_contacto": "Debe completar los campos obligatorios de su información de contacto",
+    "msg_error_afp": "Debe seleccionar la AFP a la cual se encuentra afiliado",
+    "msg_error_salud": "Debe seleccionar el régimen de salud al cual se encuentra afiliado",
+    "msg_error_mutual": "Debe seleccionar la Mutual a la cual se encuentra afiliado",
+    "msg_error_empleadores": "Debe ingresar al menos un empleador para el cual presta servicios",
+    "msg_toma_conocimiento": "Debe indicar que ha tomado conocimiento sobre la información proporcionada al pie del formulario"
+
+}

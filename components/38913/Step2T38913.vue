@@ -304,7 +304,7 @@ export default {
   async created() {
     // const url = process.env.API_AFPER_DATAPAG;
     
-    const url = process.env.API_AFPER_BENEFICIO;
+        const url = process.env.API_AFPER_BENEFICIO;
           
         let rut=localStorage.getItem('rut');
         let fechaNac=localStorage.getItem('fechaNac');
@@ -317,6 +317,8 @@ export default {
             method: "GET"
             })
             .then((response) => {
+                
+                console.log(url );
                 this.infoPago = response.data.data.pagos;
                 console.log(this.infoPago );
                               

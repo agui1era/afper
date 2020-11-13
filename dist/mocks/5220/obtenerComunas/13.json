@@ -1,0 +1,210 @@
+[
+    {   
+       "id" : 13101,
+       "nombre" : "SANTIAGO"
+    },      
+    {
+       "id" : 13102,
+       "nombre" : "CERRILLOS"
+    },  
+    {
+       "id" : 13103,
+       "nombre" : "CERRO NAVIA"
+    },  
+    {
+       "id" : 13104,
+       "nombre" : "CONCHALÍ"
+    },  
+    {
+       "id" : 13105,
+       "nombre" : "EL BOSQUE"
+    },  
+    {
+       "id" : 13106,
+       "nombre" : "ESTACIÓN CENTRAL"
+    },  
+    {
+       "id" : 13107,
+       "nombre" : "HUECHURABA"
+    },  
+    {
+       "id" : 13108,
+       "nombre" : "INDEPENDENCIA"
+    },  
+    {
+       "id" : 13109,
+       "nombre" : "LA CISTERNA"
+    },  
+    {
+       "id" : 13110,
+       "nombre" : "LA FLORIDA"
+    },  
+    {
+       "id" : 13111,
+       "nombre" : "LA GRANJA"
+    },  
+    {
+       "id" : 13112,
+       "nombre" : "LA PINTANA"
+    },  
+    {
+       "id" : 13113,
+       "nombre" : "LA REINA"
+    },  
+    {
+       "id" : 13114,
+       "nombre" : "LAS CONDES"
+    },  
+    {
+       "id" : 13115,
+       "nombre" : "LO BARNECHEA"
+    },  
+    {
+       "id" : 13116,
+       "nombre" : "LO ESPEJO"
+    },  
+    {
+       "id" : 13117,
+       "nombre" : "LO PRADO"
+    },  
+    {
+       "id" : 13118,
+       "nombre" : "MACUL"
+    },  
+    {
+       "id" : 13119,
+       "nombre" : "MAIPÚ"
+    },  
+    {
+       "id" : 13120,
+       "nombre" : "ÑUÑOA"
+    },  
+    {
+       "id" : 13121,
+       "nombre" : "PEDRO AGUIRRE CERDA"
+    },  
+    {
+       "id" : 13122,
+       "nombre" : "PEÑALOLÉN"
+    },  
+    {
+       "id" : 13123,
+       "nombre" : "PROVIDENCIA"
+    },  
+    {
+       "id" : 13124,
+       "nombre" : "PUDAHUEL"
+    },  
+    {
+       "id" : 13125,
+       "nombre" : "QUILICURA"
+    },  
+    {
+       "id" : 13126,
+       "nombre" : "QUINTA NORMAL"
+    },  
+    {
+       "id" : 13127,
+       "nombre" : "RECOLETA"
+    },  
+    {
+       "id" : 13128,
+       "nombre" : "RENCA"
+    },  
+    {
+       "id" : 13129,
+       "nombre" : "SAN JOAQUÍN"
+    },  
+    {
+       "id" : 13130,
+       "nombre" : "SAN MIGUEL"
+    },  
+    {
+       "id" : 13131,
+       "nombre" : "SAN RAMÓN"
+    },  
+    {
+       "id" : 13132,
+       "nombre" : "VITACURA"
+    },  
+    {
+       "id" : 13201,
+       "nombre" : "PUENTE ALTO"
+    },  
+    {
+       "id" : 13202,
+       "nombre" : "PIRQUE"
+    },  
+    {
+       "id" : 13203,
+       "nombre" : "SAN JOSÉ DE MAIPO"
+    },  
+    {
+       "id" : 13301,
+       "nombre" : "COLINA"
+    },  
+    {
+       "id" : 13302,
+       "nombre" : "LAMPA"
+    },  
+    {
+       "id" : 13303,
+       "nombre" : "TILTIL"
+    },  
+    {
+       "id" : 13401,
+       "nombre" : "SAN BERNARDO"
+    },  
+    {
+       "id" : 13402,
+       "nombre" : "BUIN"
+    },  
+    {
+       "id" : 13403,
+       "nombre" : "CALERA DE TANGO"
+    },  
+    {
+       "id" : 13404,
+       "nombre" : "PAINE"
+    },  
+    {
+       "id" : 13501,
+       "nombre" : "MELIPILLA"
+    },  
+    {
+       "id" : 13502,
+       "nombre" : "ALHUÉ"
+    },  
+    {
+       "id" : 13503,
+       "nombre" : "CURACAVÍ"
+    },  
+    {
+       "id" : 13504,
+       "nombre" : "MARÍA PINTO"
+    },  
+    {
+       "id" : 13505,
+       "nombre" : "SAN PEDRO"
+    },  
+    {
+       "id" : 13601,
+       "nombre" : "TALAGANTE"
+    },  
+    {
+       "id" : 13602,
+       "nombre" : "EL MONTE"
+    },  
+    {
+       "id" : 13603,
+       "nombre" : "ISLA DE MAIPO"
+    },  
+    {
+       "id" : 13604,
+       "nombre" : "PADRE HURTADO"
+    },  
+    {
+       "id" : 13605,
+       "nombre" : "PEÑAFLOR"
+    }
+]

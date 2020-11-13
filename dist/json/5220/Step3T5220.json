@@ -1,0 +1,13 @@
+{
+    "proveedor_servicio": "Servicio de información entregado por",
+    "nombre_proveedor_servicio": "Instituto de Previsión Social",
+    "titulo": "Solicitud Subsidio al Trabajador Joven - Cotización",
+    "subtitulo_h2": "Resumen de la solicitud",
+    "p": "Su solicitud será resuelta en un plazo máximo de 40 días. Le recomendamos revisar el estado de su solicitud en este mismo sitio web o llamar al call center del IPS al número",
+    "strong":"600-4400040",
+    "tipo_solicitud": "subsidio al Trabajador Joven - Cotización",
+    "estado_solicitud_3": "Resuelta Concedida",
+    "estado_solicitud_9": "Resuelta Rechazada",
+    "estado_solicitud_1y2": "En Tramite",
+    "url_ficha": "https://www.chileatiende.gob.cl/fichas/5220-subsidio-a-la-cotizacion-de-trabajadores-jovenes"
+}

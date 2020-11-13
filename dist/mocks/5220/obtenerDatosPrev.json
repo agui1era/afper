@@ -1,0 +1,134 @@
+{
+    "listaAfp": [
+                    {
+                        "cAfp": 1,
+                        "descAfp": "AFP 1",
+                        "rutAfp": 11111111,
+                        "codAfp": 1
+                    },
+                    {
+                        "cAfp": 2,
+                        "descAfp": "AFP 2",
+                        "rutAfp": 22222222,
+                        "codAfp": 2
+                    },
+                    {
+                        "cAfp": 3,
+                        "descAfp": "AFP 3",
+                        "rutAfp": 33333333,
+                        "codAfp": 3
+                    },
+                    {
+                        "cAfp": 4,
+                        "descAfp": "AFP 4",
+                        "rutAfp": 44444444,
+                        "codAfp": 4
+                    },
+                    {
+                        "cAfp": 5,
+                        "descAfp": "AFP 5",
+                        "rutAfp": 55555555,
+                        "codAfp": 5
+                    },
+                    {
+                        "cAfp": 6,
+                        "descAfp": "AFP 6",
+                        "rutAfp": 66666666,
+                        "codAfp": 6
+                    },
+                    {
+                        "cAfp": 7,
+                        "descAfp": "AFP 7",
+                        "rutAfp": 77777777,
+                        "codAfp": 7
+                    },
+                    {
+                        "cAfp": 8,
+                        "descAfp": "AFP 8",
+                        "rutAfp": 88888888,
+                        "codAfp": 8
+                    },
+                    {
+                        "cAfp": 9,
+                        "descAfp": "AFP 9",
+                        "rutAfp": 99999999,
+                        "codAfp": 9
+                    }
+                ],
+    "listaMutual": [
+                    {
+                        "cCaja": 1,
+                        "descCaja": "Caja 1"
+                    },
+                    {
+                        "cCaja": 2,
+                        "descCaja": "Caja 2"
+                    },
+                    {
+                        "cCaja": 3,
+                        "descCaja": "Caja 3"
+                    },
+                    {
+                        "cCaja": 4,
+                        "descCaja": "Caja 4"
+                    },
+                    {
+                        "cCaja": 5,
+                        "descCaja": "Caja 5"
+                    },
+                    {
+                        "cCaja": 6,
+                        "descCaja": "Caja 6"
+                    },
+                    {
+                        "cCaja": 7,
+                        "descCaja": "Caja 7"
+                    },
+                    {
+                        "cCaja": 8,
+                        "descCaja": "Caja 8"
+                    },
+                    {
+                        "cCaja": 9,
+                        "descCaja": "Caja 9"
+                    }
+                  ],
+    "listaSalud": [
+                    {
+                        "iSalud": 1,
+                        "descSalud": "Salud 1"
+                    },
+                    {
+                        "iSalud": 2,
+                        "descSalud": "Salud 2"
+                    },
+                    {
+                        "iSalud": 3,
+                        "descSalud": "Salud 3"
+                    },
+                    {
+                        "iSalud": 4,
+                        "descSalud": "Salud 4"
+                    },
+                    {
+                        "iSalud": 5,
+                        "descSalud": "Salud 5"
+                    },
+                    {
+                        "iSalud": 6,
+                        "descSalud": "Salud 6"
+                    },
+                    {
+                        "iSalud": 7,
+                        "descSalud": "Salud 7"
+                    },
+                    {
+                        "iSalud": 8,
+                        "descSalud": "Salud 8"
+                    },
+                    {
+                        "iSalud": 9,
+                        "descSalud": "Salud 9"
+                    }
+                  ]
+}

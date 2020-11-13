@@ -235,7 +235,7 @@ export default {
     };
   },
 
-  middleware: 'auth',
+  //middleware: 'auth',
   components: { 
     ProgressBar 
   },
@@ -288,8 +288,11 @@ export default {
         }
             })
             .catch((error) => {
+              
               console.log('Error en consulta de beneficio');
               console.log(error.response);
+              this.$router.push({path: `/tramites/38913/4`})
+              
             }
             );
     },

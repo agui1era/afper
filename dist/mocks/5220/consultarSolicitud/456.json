@@ -1,0 +1,43 @@
+{
+    "runTrabajador": 25793815,
+    "dvRunTrabajador": "8",
+    "nomTrabajador": "Gilne Carolina",
+    "paternoTrabajador": "Hernández",
+    "maternoTrabajador": "Salazar",
+    "fechaNacimiento": 542851200,
+    "correoTrabajador": "gilne@correo.com",
+    "afpTrabajador": 66666666,
+    "telefonoTrabajador": "9 8765 4321",
+    "regSaludTrabajador": 3,
+    "mutualTrabajador": 4,
+    "vigente": "1",
+    "fechaSolicitud": 1597536000,
+    "numResolucion": 888555,
+    "codSolicitud": 456,
+    "subsidiosPagados": 1,
+    "estadoConcesion": 1,
+    "defuncion": 0,
+    "tipoIngreso": "no se",
+    "edadTrabajador": 33,
+    "direccionTrab": { 
+                        "comunaTrabajador": 1301,
+                        "domiciloTrabajador": "su casa",
+                        "deptoTrabajador": "123",
+                        "regionTrabajador": 13
+                     },
+    "empresas": [
+                 {
+                    "fechaInicioRelacion": 1514838686,
+                    "rutEmpresa": 55555555,
+                    "dvRutEmpresa": "5",
+                    "razonSocial": "Empresa 5 de trabajador consultado",
+                    "direccionEmp": {
+                                      "comunaEmpresa": 1306,
+                                      "regionEmpresa": 13,
+                                      "dirEmpresa": "direccion"
+                                    },
+                    "correoEmpresa": "empresa5@consultado.com",
+                    "telefonoEmpresa": "2 2222 5555" 
+                 }
+                ]
+}

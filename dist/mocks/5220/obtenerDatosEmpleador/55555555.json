@@ -1,0 +1,30 @@
+[
+    {
+        "nombre": "Empresa 3",
+        "rut": "33333333-3",
+        "telefono": "+56 9 9876 4567",
+        "correo": "empresa3@correo.com",
+        "rutAfp": 99999999,
+        "direccion": { "calle": "Calle Empresa 3",
+                       "numero": "333",
+                       "oficina": "Oficina 3",
+                       "regionId": 13,
+                       "ciudad": "Santiago",
+                       "comunaId": 13101
+                     }
+    },
+    {
+        "nombre": "Empresa 4",
+        "rut": "44444444-4",
+        "telefono": "+56 9 9876 4567",
+        "correo": "empresa4@correo.com",
+        "rutAfp": 99999999,
+        "direccion": { "calle": "Calle Empresa 4",
+                       "numero": "444",
+                       "oficina": "Oficina 4",
+                       "regionId": 13,
+                       "ciudad": "Santiago",
+                       "comunaId": 13101
+                     }
+    }
+]

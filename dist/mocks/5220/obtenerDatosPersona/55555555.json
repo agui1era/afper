@@ -1,0 +1,19 @@
+{
+    "nombres": "Alfredo Alejandro",
+    "apellidoPaterno": "Macero",
+    "apellidoMaterno": "Hernández",
+    "rut": "55555555-5",
+    "fechaNac": 567745200,
+    "edad": 32,
+    "telefono": "+56 9 9876 4567",
+    "correo": "alfredo.macero@xintec.cl",
+    "direccion": { "calle": "Av. Santa Rosa",
+                   "numero": "#237",
+                   "poblacion": "Santiago",
+                   "block": "B",
+                   "depto": "1001",
+                   "regionId": 13,
+                   "ciudad": "Santiago",
+                   "comunaId": 13101
+                 }
+}
